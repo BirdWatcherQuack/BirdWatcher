@@ -15,3 +15,8 @@ router.get('/termsofservice', (req, res) => {
   res.render('termsofservice', { layout: 'main' });
   //console.log('Hello')
 })
+
+router.get('/privacypolicy', (req, res) => {
+  res.render('privacypolicy', { layout: 'main' });
+  //console.log('Hello')
+})
