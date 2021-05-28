@@ -18,13 +18,13 @@ const seedDatabase = async () => {
 
 seedDatabase();
 
-const seedBirdDatatbase = async () => {
+const seedBirdDatabase = async () => {
   await sequelize.sync({ force: true });
-  await User.bulkCreate(birdData, {
+  await Bird.bulkCreate(birdData, {
     individualHooks: true,
     returning: true,
   });
   process.exit(0);
 };
 
-seedBirdDatatbase();
+seedBirdDatabase();
