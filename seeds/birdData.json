@@ -46,5 +46,37 @@
         "max_age": "10",
         "weight": "4",
         "description": "The great crested flycatcher (Myiarchus crinitus) is a large insect-eating bird of the tyrant flycatcher family. It is the most widespread member of the genus Myiarchus in North America, and is found over most of the eastern and mid-western portions of the continent."
+    },
+    {
+        "bird_type": "Woodpeckers",
+        "bird_name": "Pileated woodpecker",
+        "latin_name": "Dryocopus pileatus",
+        "max_age": "12",
+        "weight": "4",
+        "description": "The pileated woodpecker (Dryocopus pileatus) is a large, mostly black woodpecker native to North America. An insectivore, it inhabits deciduous forests in eastern North America, the Great Lakes, the boreal forests of Canada, and parts of the Pacific Coast. It is the second largest woodpecker species in the U.S., behind the critically endangered or possibly extinct ivory-billed woodpecker."
+    },
+    {
+        "bird_type": "Swallows",
+        "bird_name": "Tree swallow",
+        "latin_name": "Tachycineta bicolor",
+        "max_age": "12",
+        "weight": "3",
+        "description": "The tree swallow (Tachycineta bicolor) is a migratory bird of the family Hirundinidae. Found in the Americas, the tree swallow was first described in 1807 by French ornithologist Louis Vieillot as Hirundo bicolor. It has since been moved to its current genus, Tachycineta, within which its phylogenetic placement is debated. The tree swallow has glossy blue-green upperparts, with the exception of the blackish wings and tail, and white underparts. The bill is black, the eyes dark brown, and the legs and feet pale brown. The female is generally duller than the male, and the first-year female has mostly brown upperparts, with some blue feathers. Juveniles have brown upperparts, and a grey-brown-washed breast. The tree swallow breeds in the US and Canada. It winters along southern US coasts south, along the Gulf Coast, to Panama and the northwestern coast of South America, and in the West Indies."
+    },
+    {
+        "bird_type": "Geese",
+        "bird_name": "Canada goose",
+        "latin_name": "Branta canadensis",
+        "max_age": "24",
+        "weight": "8",
+        "description": "The Canada goose (Branta canadensis) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and its migration occasionally reaches across the Atlantic to northern Europe. It has been introduced to the United Kingdom, Ireland, Finland, Sweden, Denmark, New Zealand, Japan, Chile, Argentina and the Falkland Islands.[2] Like most geese, the Canada goose is primarily herbivorous and normally migratory; it tends to be found on or close to fresh water."
+    },
+    {
+        "bird_type": "Ducks",
+        "bird_name": "Mallards",
+        "latin_name": "Anas platyrhynchos",
+        "max_age": "10",
+        "weight": "10",
+        "description": "The mallard (/ˈmælɑːrd, ˈmælərd/) or wild duck (Anas platyrhynchos) is a dabbling duck that breeds throughout the temperate and subtropical Americas, Eurasia, and North Africa, and has been introduced to New Zealand, Australia, Peru, Brazil, Uruguay, Argentina, Chile, Colombia, the Falkland Islands, and South Africa. This duck belongs to the subfamily Anatinae of the waterfowl family Anatidae. The male birds (drakes) have a glossy green head and are grey on their wings and belly, while the females (hens or ducks) have mainly brown-speckled plumage. Both sexes have an area of white-bordered black or iridescent blue feathers called a speculum on their wings; males especially tend to have blue speculum feathers. The mallard is 50–65 cm (20–26 in) long, of which the body makes up around two-thirds the length. The wingspan is 81–98 cm (32–39 in) and the bill is 4.4 to 6.1 cm (1.7 to 2.4 in) long. It is often slightly heavier than most other dabbling ducks, weighing 0.7–1.6 kg (1.5–3.5 lb). Mallards live in wetlands, eat water plants and small animals, and are social animals preferring to congregate in groups or flocks of varying sizes. This species is the main ancestor of most breeds of domestic ducks."
     }
 ]
