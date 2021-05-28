@@ -22,7 +22,7 @@
 
    To run a project, please follow the link 
 
-   [https://birdwatcherquack.herokuapp.com/](https://birdwatcherquack.herokuapp.com/)
+   [Heroku](https://birdwatcherquack.herokuapp.com/)
 
 
 
@@ -30,7 +30,7 @@
 
    To view application code, please follow the link 
 
-   []()
+   [GitHub](https://github.com/BirdWatcherQuack/BirdWatcher)
 
 
  # Screenshots
