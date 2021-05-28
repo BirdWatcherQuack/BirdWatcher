@@ -11,25 +11,17 @@ Location.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    location_name: {
-      type: DataTypes.STRING,
-    },
-    lat: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    lon: {
-      type: DataTypes.INTEGER,
+    coordinates: {
+      type: DataTypes.POINT,
       allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
+        key: 'id'
       },
     },
-
   },
   {
     sequelize,
