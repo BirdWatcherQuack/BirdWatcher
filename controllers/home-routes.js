@@ -10,3 +10,8 @@ router.get('/', (req, res) => {
 router.get('/home', (req, res) =>
   res.render('homepage', { layout: 'main' }))
 module.exports = router;
+
+router.get('/termsofservice', (req, res) => {
+  res.render('termsofservice', { layout: 'main' });
+  //console.log('Hello')
+})
