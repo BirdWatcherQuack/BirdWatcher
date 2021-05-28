@@ -43,20 +43,6 @@ Bird.init(
       allowNull: false
     },
 
-    sighting: {
-      type: DataTypes.GEOMETRY('POINT'),
-      references: {
-        model: 'location',
-        key: 'coordinates'
-      },
-    },
-    user_id_creator: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
   },
     {
       sequelize,

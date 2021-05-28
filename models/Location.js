@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Location extends Model { }
 
+// Also known as 'observation' Model
 Location.init(
   {
     id: {
@@ -12,13 +13,20 @@ Location.init(
       autoIncrement: true,
     },
     coordinates: {
-      type: DataTypes.POINT,
+      type: DataTypes.GEOMETRY('POINT'),
       allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
+        key: 'id'
+      },
+    },
+    bird_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'bird',
         key: 'id'
       },
     },
