@@ -16,20 +16,20 @@
         "description": "Mourning doves are light grey and brown and generally muted in color. Males and females are similar in appearance. The species is generally monogamous, with two squabs (young) per brood. Both parents incubate and care for the young. Mourning doves eat almost exclusively seeds, but the young are fed crop milk by their parents."
     },
     {
-        "bird_type": "",
-        "bird_name": "",
-        "latin_name": "",
-        "max_age": "",
-        "weight": "",
-        "description": ""
+        "bird_type": "Hummingbird",
+        "bird_name": "Ruby-throated hummingbird",
+        "latin_name": "Archilochus colubris",
+        "max_age": "6",
+        "weight": "3",
+        "description": "The ruby-throated hummingbird (Archilochus colubris) is a species of hummingbird that generally spends the winter in Central America, Mexico, and Florida, and migrates to Canada and other parts of Eastern North America for the summer to breed. It is by far the most common hummingbird seen east of the Mississippi River in North America."
     },
     {
-        "bird_type": "",
-        "bird_name": "",
-        "latin_name": "",
-        "max_age": "",
-        "weight": "",
-        "description": ""
+        "bird_type": "Raptors",
+        "bird_name": "Bald Eagle",
+        "latin_name": "Haliaeetus leucocephalus",
+        "max_age": "70",
+        "weight": "9",
+        "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting."
     },
     {
         "bird_type": "",
