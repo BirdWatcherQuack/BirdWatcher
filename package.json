@@ -29,6 +29,7 @@
     "handlers": "^1.0.3",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "passport-facebook": "^3.0.0",
     "sequelize": "^6.6.2",
     "sequelizer": "^1.1.4"
   }
