@@ -32,19 +32,19 @@
         "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting."
     },
     {
-        "bird_type": "",
-        "bird_name": "",
-        "latin_name": "",
-        "max_age": "",
-        "weight": "",
-        "description": ""
+        "bird_type": "Owl",
+        "bird_name": "Snowy Owl",
+        "latin_name": "Bubo scandiacus",
+        "max_age": "28",
+        "weight": "2",
+        "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown."
     },
     {
-        "bird_type": "",
-        "bird_name": "",
-        "latin_name": "",
-        "max_age": "",
-        "weight": "",
-        "description": ""
+        "bird_type": "Flycatchers",
+        "bird_name": "Great crested flycatcher",
+        "latin_name": "Myiarchus crinitus",
+        "max_age": "10",
+        "weight": "4",
+        "description": "The great crested flycatcher (Myiarchus crinitus) is a large insect-eating bird of the tyrant flycatcher family. It is the most widespread member of the genus Myiarchus in North America, and is found over most of the eastern and mid-western portions of the continent."
     }
 ]
