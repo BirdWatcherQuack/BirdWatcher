@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS bird_db;
+
+CREATE DATABASE bird_db;
