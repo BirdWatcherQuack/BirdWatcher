@@ -20,3 +20,7 @@ router.get('/privacypolicy', (req, res) => {
   res.render('privacypolicy', { layout: 'main' });
   //console.log('Hello')
 })
+
+router.get('/map', (req, res) => {
+  res.render('map', { layout: 'main' });
+})

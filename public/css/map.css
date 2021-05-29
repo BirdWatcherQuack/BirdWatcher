@@ -55,9 +55,17 @@ body {
   z-index: 1;
 }
 
-.labelText {
+.labelText, .view-map {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+a .view-map {
+  text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
 
 .btn {
