@@ -8,7 +8,40 @@
   input {
     font-family: "Poppins", sans-serif;
 }
-img {
-    border-radius: 50%;
+
+#mySidebar {
+    display: none;
 }
+
+a {
+    text-decoration: none;
+}
+.w3-circle {
+    background: #f0b26b;
+    border: solid 1px rgb(3, 54, 3);
+}
+.logo {
+    display: flex;
+    width: 13%;
+    float: right;
+    margin-top: 8px;
+}
+
+.barColor,
+h3,
+h1,
+nav,
+footer {
+  color: rgb(3, 54, 3);
+}
+
+footer a {
+    display: inline-block;
+}
+
+footer a, footer h3 {
+    margin-left: 3%;
+}
+
+
   
