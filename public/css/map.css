@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.alignInputs {
+  margin-top: 10%;
+  align-items: center;
+}
+
+.inputs {
+  margin-top: 1rem;
+  align-content: center;
+}
+
+.leaflet-container {
+  background: white;
+}
+
+#mapid {
+  z-index: 0;
+}
+
+.column {
+  margin-top: 5%;
+}
+.column1 {
+  flex:1;
+
+ }
+
+ .code-card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding:1rem;
+  
+ }
+
+ .ui-autocomplete .ui-menu-item {
+  background: white;
+  width: 45%;
+  padding: 5px;
+  padding-left: 10px;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+ .ui-autocomplete .ui-menu-item:hover {
+  background: rgb(22, 22, 22);
+  color: white;
+  opacity: 1.0;
+  z-index: 1;
+}
+
+.labelText, .view-map {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+a .view-map {
+  text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+.btn {
+  width: 150px;
+  background-color: #87db92;
+  border: solid 1px rgb(3, 54, 3);
+  outline: none;
+  height: 10%;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 44%;
+}
+
+.btn:hover {
+  background-color: rgb(3, 54, 3);
+}
+
+.input {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}

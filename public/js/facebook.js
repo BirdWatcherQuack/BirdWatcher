@@ -9,7 +9,9 @@ window.fbAsyncInit = function () {
     version: 'v10.0'
   });
 
-
+  // FB.getLoginStatus(function (response) {
+  //   statusChangeCallback(response);
+  // });
 
   FB.AppEvents.logPageView();
 
@@ -31,12 +33,14 @@ const person = { userID: "", name: "", accessToken: "", email: "" };
 function logIn() {
   FB.login(function (response) {
     if (response.status == 'connected') {
+
       //console.log(response.status)
 
       person.userID = response.authResponse.userID;
       person.accessToken = response.authResponse.accessToken;
+
       FB.api('/me?fields=id,name,email', function (userData) {
-        //console.log(userData)
+        console.log(userData)
         person.name = userData.name;
         person.email = userData.email;
 
@@ -82,6 +86,7 @@ function fLogout() {
     }
   });
 }
+document.querySelector('#logout').addEventListener('click', fLogout);
 
 // function fLogout() {
 //   FB.getLoginStatus(function (response) {

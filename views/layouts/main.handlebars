@@ -9,11 +9,16 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
   <title>Quack</title>
+  <link rel="stylesheet" type="text/css" href="/css/map.css">
   <link rel="stylesheet" type="text/css" href="/css/login.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -28,10 +33,21 @@
 
   <a href="/termsofservice" target="_blank">Terms of Service</a>
 
+  {{!-- map --}}
+  <section class="row one">
+    <div class="column1">
+      <figure class="card code-card">
+        <a onclick="myFunction()" id="viewMap" class="view-map" href="/map">View Map</a>
+        <div id="mapid" style="height: 500px; width: auto;"></div>
+      </figure>
+    </div>
+  </section>
+
 
   <script src="/js/logout.js"></script>
   <script src="/js/login.js"></script>
   <script src="/js/facebook.js"></script>
+  <script src="/js/map.js"></script>
 
 </body>
 
