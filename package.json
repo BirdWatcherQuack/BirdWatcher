@@ -1,5 +1,5 @@
 {
-  "name": "birdwatcher",
+  "name": "the-birdwatcher",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -31,5 +31,6 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
     "sequelizer": "^1.1.4"
-  }
+  },
+  "devDependencies": {}
 }

@@ -5,29 +5,78 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
   <title>Quack</title>
+  <link rel="stylesheet" type="text/css" href="/css/map.css">
   <link rel="stylesheet" type="text/css" href="/css/login.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>  
 </head>
 
 <body>
-  <header>
+  <div  class="container">
+  
     <h1>Welcome to the Birdwatcher</h1>
-  </header>
+    <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+        <div class="w3-container w3-theme-d2">
+            <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+            <br>
+            <div class="w3-padding w3-center">
+                <img class="w3-circle" src="/public/images/duck_right.png" alt="avatar" style="width:75%">
+            </div>
+        </div>
+        <a class="w3-bar-item w3-button " href="./profile" onclick="closeSidebar()">Home</a>
+        <a class="w3-bar-item w3-button " href="./profile" onclick="closeSidebar()">Map</a>
+    </nav>
 
+    <header class="w3-bar w3-card w3-theme">
+        <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme barColor"
+            onclick="openSidebar()">&#9776;</button>
+        <img class="logo" src="./assets/images/logo.png" alt="logo">
+        <h1 class="w3-bar-item headerName">Plan Surfing</h1>
+    </header>
+    
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button onclick="fLogout()" id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      
+    
+    <main class="container container-fluid mt-5">
+      
+      {{{body}}}
+      <a href="/termsofservice" target="_blank">Terms of Service</a>
+      {!-- map --}}
+  <section class="row one">
+    <div class="column1">
+      <figure class="card code-card">
+        <a onclick="myFunction()" id="viewMap" class="view-map" href="/map">View Map</a>
+        <div id="mapid" style="height: 500px; width: auto;"></div>
+      </figure>
+    </div>
+  </section>
 
-  {{{body}}}
+    </main>
+    <footer>
 
+    </footer>
+  </div>
 
   <script src="/js/logout.js"></script>
   <script src="/js/login.js"></script>
-
+  <script src="/js/facebook.js"></script>
+  <script src="/js/map.js"></script>
 </body>
 
 </html>
