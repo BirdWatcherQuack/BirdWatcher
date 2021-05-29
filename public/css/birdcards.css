@@ -1,5 +1,3 @@
-
-
 .bird-container {
   font-family: sans-serif;
   align-items: center; 
@@ -21,7 +19,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f00;
+  /* img of the bird will go */
+  background: #f0b26b;
   transition: 0.7s;
   z-index: 1;
 }
@@ -76,7 +75,7 @@ i {
 }
 
 .bird-container .bird-card:hover .face.face1{
-  background: #ff0057;
+  background: #f0b26b;
   transform: translateY(0px);
 }
 
