@@ -1,14 +1,18 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+{{!--
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> --}}
+<link rel="stylesheet" type="text/css" href="/css/birdcards.css" />
+{{#each birdsArr as |bird|}}
+<div class="bird-card">
+  <div class="face face1">
+    <div class="content">
+    </div>
+    {{!-- <img src="{{bird.IMAGEURL}}" /> --}}
+  </div>
+  <div class="face face2">
+    <div class="content">
+      {{bird.bird_name}}
+    </div>
+  </div>
 </div>
+{{/each}}

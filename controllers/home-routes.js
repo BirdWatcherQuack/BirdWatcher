@@ -7,9 +7,19 @@ router.get('/', (req, res) => {
   //console.log('Hello')
 })
 
-router.get('/home', (req, res) =>
-  res.render('homepage', { layout: 'main' }))
-module.exports = router;
+router.get('/home', async (req, res) => {
+  try {
+    const birdData = await Bird.findAll({});
+    const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
+    console.log('birdsArr', birdsArr)
+    res.render('birdcard', {
+      layout: 'main',
+      birdsArr: birdsArr
+    })
+  } catch (err) {
+    console.log(err)
+  }
+})
 
 router.get('/termsofservice', (req, res) => {
   res.render('termsofservice', { layout: 'main' });
@@ -24,3 +34,5 @@ router.get('/privacypolicy', (req, res) => {
 router.get('/map', (req, res) => {
   res.render('map', { layout: 'main' });
 })
+
+module.exports = router;
