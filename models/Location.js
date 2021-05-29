@@ -13,7 +13,7 @@ Location.init(
       autoIncrement: true,
     },
     coordinates: {
-      type: DataTypes.GEOMETRY('POINT'),
+      type: DataTypes.STRING(100),
       allowNull: false,
     },
     user_id: {
