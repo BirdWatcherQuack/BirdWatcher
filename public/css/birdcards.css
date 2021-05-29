@@ -1,17 +1,8 @@
-/* body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;   
-  background-color: #f1f1f1; 
-} */
+
 
 .bird-container {
   font-family: sans-serif;
-  /* width: 1000px; */
+  align-items: center; 
   width: 100vw;
   position: relative;
   display: flex;
