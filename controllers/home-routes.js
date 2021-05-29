@@ -21,6 +21,20 @@ router.get('/home', async (req, res) => {
   }
 })
 
+router.get('/home/:id', async (req, res) => {
+  try {
+    const birdData = await Bird.findAll({});
+    const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
+    console.log('birdsArr', birdsArr)
+    res.render('singlebird', {
+      layout: 'main',
+      birdsArr: birdsArr
+    })
+  } catch (err) {
+    console.log(err)
+  }
+})
+
 router.get('/home', async (req, res) => {
   try {
     const userData = await User.findAll({});
