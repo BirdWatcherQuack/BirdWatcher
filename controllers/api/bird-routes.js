@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const { Bird, Location, User } = require('../../models');
 
+// for api/birds/
+
 router.get('/', async (req, res) => {
     try {
-      const dbBirdData = await Bird.findAll({
-          include: [{ model: User, Location }]
-      });
+      const dbBirdData = await Bird.findAll();
 
         res.status(200).json(dbBirdData);
     } catch (err) {
@@ -14,11 +14,22 @@ router.get('/', async (req, res) => {
     }
   });
 
+//   router.get('/cards', async (req, res) => {
+//     console.log("Hi")  
+//     try {
+//           const dbBirdData = await Bird.findAll();
+//           console.log(dbBirdData)
+  
+//           res.status(200).json(dbBirdData);
+//       } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//       }
+//     });
+
 router.get('/:id', async (req, res) => {
 try {
-    const dbBirdData = await Bird.findByPk(req.params.id, {
-    include: [{ model: User, Location }],
-    });
+    const dbBirdData = await Bird.findByPk(req.params.id);
 
     if (!dbBirdData) {
     res.status(404).json({ message: 'No bird found with that id!' });

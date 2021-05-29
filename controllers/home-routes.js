@@ -1,5 +1,6 @@
-const router = require('express').Router();
-const { User, Bird } = require('../models');
+ const router = require('express').Router();
+const { User, Birds } = require('../models');
+
 
 router.get('/', (req, res) => {
   res.render('loginbody', { layout: 'login' });
