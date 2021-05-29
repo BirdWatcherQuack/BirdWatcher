@@ -72,7 +72,7 @@
         "description": "The Canada goose (Branta canadensis) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and its migration occasionally reaches across the Atlantic to northern Europe. It has been introduced to the United Kingdom, Ireland, Finland, Sweden, Denmark, New Zealand, Japan, Chile, Argentina and the Falkland Islands.[2] Like most geese, the Canada goose is primarily herbivorous and normally migratory; it tends to be found on or close to fresh water."
     },
     {
-        "bird_type": "Ducks",
+        "bird_type": "Duck",
         "bird_name": "Mallards",
         "latin_name": "Anas platyrhynchos",
         "max_age": "10",
@@ -128,7 +128,7 @@
         "description":"Ruby-crowned kinglets (Regulus calendula) are native to northern, western, and some eastern parts of North America. Their breeding range includes most of Alaska, the majority of Canada, a small portion of the Rocky Mountains, and the northern parts of the Great Lakes. Ruby-crowned kinglets live year-round in parts of the western United States and in the southwestern portion of Canada. Their winter range extends from the southeastern to western United States and dips south into Mexico and Central America. There are also two records of ruby-crowned kinglets in Greenland and another record from Iceland."
     },
     {
-        "bird_type": "Ducks",
+        "bird_type": "Duck",
         "bird_name": "Green-winged teal",
         "latin_name": "Anas carolinensis",
         "max_age": "17",
