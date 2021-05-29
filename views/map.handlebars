@@ -1,13 +1,20 @@
-<label for="bird-type">Type of Bird</label>
-<input id="bird-type">
-<hr>
-<label for="lat-long-input">GPS Coordinates (Latitude and Longitude)</label>
-<input id="lat-long-input">
-<hr>
-<button type="submit" id="submitButton">Submit Bird Sighting for Review</button>
-<hr>
-<div id="mapid" style="height: 500px; width: 650px;"></div>
-<div id="text"></div>
+<div class="column">
+  <figure class="card code-card">
+    <label class="labelText" for="bird-type">Type of Bird</label>
+    <input class="input is-warning" type="text" id="bird-type">
+    <label class="labelText" for="lat-long-input">GPS Coordinates (Latitude and Longitude)</label>
+    <input class="input is-warning" type="text" id="lat-long-input">
+    <button type="submit" id="submitButton" class="btn">Submit Bird Sighting for Review</button>
+  </figure>
+</div>
+<section class="row one">
+  <div class="column1">
+    <figure class="card code-card">
+      <div id="mapid" style="height: 500px; width: auto;"></div>
+
+    </figure>
+  </div>
+</section>
 
 
 <script src="/js/map.js"></script>
