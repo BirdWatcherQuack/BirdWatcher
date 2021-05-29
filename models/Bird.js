@@ -35,12 +35,12 @@ Bird.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1600),
       allowNull: false,
     },
     bird_img: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
   },
