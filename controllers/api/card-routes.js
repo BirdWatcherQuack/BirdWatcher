@@ -43,7 +43,6 @@ router.get('/random', async (req, res) => {
         }
         console.log(birdRandomCards)
         res.status(200).json(birdRandomCards);
-
       })
 });
 

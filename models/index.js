@@ -7,27 +7,10 @@ Bird.belongsToMany(User, {
   through: Location,
 })
 
-// Bird.belongsToMany(Location, {
-//   // foreignKey: 'user_id',
-//   through: Birdsighting,
-// })
-
-// Bird.belongsToMany(Location, {
-//   // foreignKey: 'user_id',
-//   through: User,
-// })
-
 User.belongsToMany(Bird,{
   // foreignKey: 'bird_id',
   through: Location,
 })
 
-// Location.belongsToMany(Bird, {
-//   // foreignKey: 'user_id',
-//   through: User,
-// })
-
-// Is there not a many-to-many relationship between locations and birds?
-// A bird (as a species, not an individual) and a location (set of coordinates)
 
 module.exports = { User, Bird, Location };

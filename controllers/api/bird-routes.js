@@ -14,18 +14,51 @@ router.get('/', async (req, res) => {
     }
   });
 
-//   router.get('/cards', async (req, res) => {
-//     console.log("Hi")  
-//     try {
-//           const dbBirdData = await Bird.findAll();
-//           console.log(dbBirdData)
-  
-//           res.status(200).json(dbBirdData);
-//       } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//       }
-//     });
+  router.get('/sightings/:id', async (req, res) => {
+    try {
+          const dbBirdData = await Bird.findByPk(req.params.id);
+          const birdSimple = dbBirdData.get({ plain: true })
+
+          const dbSightingsData = await Location.findAll()
+          const sightingsPlain = dbSightingsData.map((sight) => sight.get({ plain: true }))
+
+            const birdShipData = {
+                id: birdSimple.id,
+                bird_name: birdSimple.bird_name,
+                coordinates: "N/A"
+            }
+
+            const birdCoordinates = []
+          for (let i = 0; i < sightingsPlain.length; i++) {
+              if (birdSimple.id === sightingsPlain[i].bird_id) {
+                birdCoordinates.push(sightingsPlain[i].coordinates)
+              } 
+          }
+          birdShipData.coordinates = birdCoordinates
+          console.log(birdCoordinates)
+          console.log(birdShipData)
+
+          res.status(200).json(birdShipData);
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    });
+
+router.get('/names', async (req, res) => {
+    try {
+        const dbBirdData = await Bird.findAll();
+        const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
+        const namesList = []
+        for (let i = 0; i < birdPlain.length; i++) {
+            console.log(birdPlain[i].bird_name)
+            namesList.push(birdPlain[i].bird_name)
+        }
+        res.status(200).json(namesList);
+    } catch {
+        res.status(500).json(err);
+    }
+});
 
 router.get('/:id', async (req, res) => {
 try {
