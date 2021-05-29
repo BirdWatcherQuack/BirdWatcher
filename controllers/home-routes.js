@@ -1,5 +1,5 @@
- const router = require('express').Router();
-const { User, Birds } = require('../models');
+const router = require('express').Router();
+const { User, Bird } = require('../models');
 
 
 router.get('/', (req, res) => {
@@ -16,6 +16,35 @@ router.get('/home', async (req, res) => {
       layout: 'main',
       birdsArr: birdsArr
     })
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+router.get('/home/:id', async (req, res) => {
+  try {
+    const birdData = await Bird.findAll({});
+    const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
+    console.log('birdsArr', birdsArr)
+    res.render('singlebird', {
+      layout: 'main',
+      birdsArr: birdsArr
+    })
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+router.get('/home', async (req, res) => {
+  try {
+    const userData = await User.findAll({});
+
+    const user = userData.map((username) => username.get({ plain: true }));
+
+    res.render('username', {
+      user: user
+    });
+
   } catch (err) {
     console.log(err)
   }

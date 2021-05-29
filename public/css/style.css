@@ -11,6 +11,7 @@
 
 #mySidebar {
     display: none;
+    z-index: 5;
 }
 
 a {
