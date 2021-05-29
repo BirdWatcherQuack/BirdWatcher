@@ -15,8 +15,58 @@
         "bird_id": "5"
     },
     {
+        "coordinates": "45.416123, -75.658213",
+        "user_id": "4",
+        "bird_id": "13"
+    },
+    {
+        "coordinates": "45.417123, -75.617234",
+        "user_id": "4",
+        "bird_id": "18"
+    },
+    {
+        "coordinates": "45.416234, -75.658987",
+        "user_id": "2",
+        "bird_id": "13"
+    },
+    {
+        "coordinates": "45.413322, -75.658611",
+        "user_id": "4",
+        "bird_id": "19"
+    },
+    {
+        "coordinates": "45.415135, -75.655123",
+        "user_id": "1",
+        "bird_id": "7"
+    },
+    {
+        "coordinates": "45.414299, -75.658231",
+        "user_id": "3",
+        "bird_id": "12"
+    },
+    {
+        "coordinates": "45.434623, -75.658788",
+        "user_id": "4",
+        "bird_id": "15"
+    },
+    {
+        "coordinates": "45.751234, -75.658788",
+        "user_id": "4",
+        "bird_id": "18"
+    },
+    {
+        "coordinates": "45.556234, -75.657341",
+        "user_id": "4",
+        "bird_id": "10"
+    },
+    {
+        "coordinates": "45.463421, -75.163245",
+        "user_id": "4",
+        "bird_id": "20"
+    },
+    {
         "coordinates": "45.414299, -75.658788",
-        "user_id": "5",
-        "bird_id": "4"
+        "user_id": "3",
+        "bird_id": "17"
     }
 ]

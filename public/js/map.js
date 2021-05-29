@@ -26,7 +26,7 @@ function onMapClick(e) {
   //     var marker = L.marker([x, y]).addTo(myOttawaMap);
   //     document.getElementById("text").textContent = `${x},${y}`
   // }
-
+  
   // myOttawaMap.on('click', addMarker(lat, long))
 }
 
