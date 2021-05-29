@@ -12,10 +12,6 @@ User.belongsToMany(Bird,{
   through: Location,
 })
 
-Location.belongsToMany(Bird, {
-  foreignKey: 'location_id'
-})
-
 // Is there not a many-to-many relationship between locations and birds?
 // A bird (as a species, not an individual) and a location (set of coordinates)
 

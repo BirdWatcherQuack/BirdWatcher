@@ -4,7 +4,7 @@ const { Bird, Location, User } = require('../../models');
 router.get('/', async (req, res) => {
     try {
       const dbBirdData = await Bird.findAll({
-          include: [{ model: Location }]
+          include: [{ model: User, Location }]
       });
 
         res.status(200).json(dbBirdData);
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
 try {
     const dbBirdData = await Bird.findByPk(req.params.id, {
-    include: [{ model: Location }],
+    include: [{ model: User, Location }],
     });
 
     if (!dbBirdData) {
