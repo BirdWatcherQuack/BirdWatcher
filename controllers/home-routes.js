@@ -10,3 +10,17 @@ router.get('/', (req, res) => {
 router.get('/home', (req, res) =>
   res.render('homepage', { layout: 'main' }))
 module.exports = router;
+
+router.get('/termsofservice', (req, res) => {
+  res.render('termsofservice', { layout: 'main' });
+  //console.log('Hello')
+})
+
+router.get('/privacypolicy', (req, res) => {
+  res.render('privacypolicy', { layout: 'main' });
+  //console.log('Hello')
+})
+
+router.get('/map', (req, res) => {
+  res.render('map', { layout: 'main' });
+})
