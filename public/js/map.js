@@ -52,7 +52,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
   console.log(dataPackage)
 })
 
-//hide view map link when in full page mode
-function myFunction() {
-  document.getElementById("viewMap").style.display = "none";
-}
+// //hide view map link when in full page mode
+// function myFunction() {
+//   document.getElementById("viewMap").style.display = "none";
+// }
