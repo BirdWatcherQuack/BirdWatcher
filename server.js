@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 
+
+
 //manage 2 layouts of handlebars
 //const Hapi = require('@hapi/hapi');
 //const HandlebarsRepeatHelper = require('handlebars-helper-repeat')
@@ -11,6 +13,7 @@ const express = require('express');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const routes = require('./controllers');
@@ -32,9 +35,9 @@ const sess = {
   cookie: {},
   resave: false,
   saveUninitialized: true,
-  // store: new SequelizeStore({
-  //   db: sequelize
-  // })
+  store: new SequelizeStore({
+    db: sequelize
+  })
 };
 
 app.use(session(sess));
