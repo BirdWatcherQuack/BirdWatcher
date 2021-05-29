@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
   });
 
   router.get('/sightings/:id', async (req, res) => {
-    console.log("Hi")  
     try {
           const dbBirdData = await Bird.findByPk(req.params.id);
           const birdSimple = dbBirdData.get({ plain: true })
@@ -45,6 +44,21 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
       }
     });
+
+router.get('/names', async (req, res) => {
+    try {
+        const dbBirdData = await Bird.findAll();
+        const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
+        const namesList = []
+        for (let i = 0; i < birdPlain.length; i++) {
+            console.log(birdPlain[i].bird_name)
+            namesList.push(birdPlain[i].bird_name)
+        }
+        res.status(200).json(namesList);
+    } catch {
+        res.status(500).json(err);
+    }
+});
 
 router.get('/:id', async (req, res) => {
 try {

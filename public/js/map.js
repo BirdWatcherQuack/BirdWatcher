@@ -26,11 +26,32 @@ function onMapClick(e) {
   //     var marker = L.marker([x, y]).addTo(myOttawaMap);
   //     document.getElementById("text").textContent = `${x},${y}`
   // }
-  
+
   // myOttawaMap.on('click', addMarker(lat, long))
 }
 
-const birdList = ["Canada Goose", "Wood Duck", "Mallard", "Green-winged Teal", "Hooded Merganser", "Ruffed Grouse", "Wild Turkey", "Green Heron", "Turkey Vulture", "Osprey", "Sharp-shinned Hawk", "Cooper’s Hawk", "Northern Goshawk", "Broad-winged Hawk", "Eastern phoebe", "Snow bunting", "Swamp sparrow", "Northern waterthrush", "Pied-billed grebe"]
+const birdList = [
+    "Mourning doves",
+    "Barred owl",
+    "Ruby-throated hummingbird",
+    "Bald Eagle",
+    "Snowy Owl",
+    "Great crested flycatcher",
+    "Pileated woodpecker",
+    "Canada goose",
+    "Mallards",
+    "Mute Swan",
+    "Tree swallow",
+    "Black Duck",
+    "Yellow-bellied sapsucker",
+    "House sparrow",
+    "Sandhill cranes",
+    "Ruby-crowned kinglet",
+    "Green-winged teal",
+    "Trumpeter swans",
+    "Wood Duck",
+    "Long-eared owl",
+]
 
 $("#bird-type").autocomplete({
   source: birdList,
