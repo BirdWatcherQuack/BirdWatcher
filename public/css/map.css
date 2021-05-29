@@ -1,0 +1,20 @@
+.ui-autocomplete .ui-menu-item {
+  background: white;
+  width: 45%;
+  padding: 5px;
+  padding-left: 10px;
+  opacity: 0.85;
+  border: 0.5px grey solid;
+  z-index: 1;
+}
+​
+.ui-autocomplete .ui-menu-item:hover {
+  background: rgb(22, 22, 22);
+  color: white;
+  opacity: 1.0;
+  z-index: 1;
+}
+​
+#mapid {
+  z-index: 0;
+}
