@@ -92,22 +92,30 @@ router.post('/', async (req, res) => {
   });
 
   // NEED HELP ON THIS SECTION
+  // api/birds/sightings
+
   router.post('/sightings', async (req, res) => {
     try { 
+        if (!req.session.user_id) throw err
         const birdData = await Bird.findAll();
-        const birdPlain = birdData.map((bird) => bird.get({ plain: true }))
-        console.log(req.body.bird_name)
-        // for (let i = 0; i < birdPlain.length; i++) {
-        //     if (req.body.bird_name)
-        // }
-
-
+        const birdPlain = birdData.map((bird) => bird.get({ plain: true })).filter((bird) => {
+            // console.log(bird.bird_name, req.body.bird_name)
+           return bird.bird_name === req.body.bird_name
+        })
+        console.log("req.session", req.session, birdPlain)
+        console.log({
+            bird_id: birdPlain[0].id, //won't work because not integer
+            coordinates: req.body.coordinates,
+    
+            user_id: req.session.user_id
+          })
       const locationData = await Location.create({
-        bird_name: req.body.bird_name, //won't work because not integer
+        bird_id: birdPlain[0].id, //won't work because not integer
         coordinates: req.body.coordinates,
-        user_id: req.body.user_id,
+
+        user_id: req.body.user_id //req.session.user_id
       });
-      res.status(200).json(birdData);
+      res.status(200).json(locationData);
     } catch (err) {
       res.status(400).json(err);
     }
