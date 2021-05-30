@@ -91,6 +91,29 @@ router.post('/', async (req, res) => {
     }
   });
 
+  // NEED HELP ON THIS SECTION
+  router.post('/sightings', async (req, res) => {
+    try { 
+        const birdData = await Bird.findAll();
+        const birdPlain = birdData.map((bird) => bird.get({ plain: true }))
+        console.log(req.body.bird_name)
+        // for (let i = 0; i < birdPlain.length; i++) {
+        //     if (req.body.bird_name)
+        // }
+
+
+      const locationData = await Location.create({
+        bird_name: req.body.bird_name, //won't work because not integer
+        coordinates: req.body.coordinates,
+        user_id: req.body.user_id,
+      });
+      res.status(200).json(birdData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+
   router.delete('/:id', async (req, res) => {
     try {
       const birdData = await Bird.destroy({
