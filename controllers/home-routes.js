@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
   });
 });
 
+//✔️ gets 6 random 
 router.get("/home", async (req, res) => {
   try {
     const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 6 }).then((encounters) => {
@@ -26,6 +27,7 @@ router.get("/home", async (req, res) => {
   }
 });
 
+// ✔️ but does not present on page
 router.get("/singlebird/:id", async (req, res) => {
   try {
     const birdsData = await Bird.findByPk(req.params.id);
@@ -58,6 +60,31 @@ router.get("/home", async (req, res, next) => {
     console.log(err);
   }
 });
+
+router.get('/homeall', async (req, res) => {
+  try {
+      const dbBirdData = await Bird.findAll();
+      const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
+
+      birdPlain.sort(function(a, b){
+        if(a.bird_name < b.bird_name) { return -1; }
+        if(a.bird_name > b.bird_name) { return 1; }
+        return 0;
+      })
+      res.render('birdcard', {
+        layout: 'main',
+        birdsArr: birdPlain
+      });
+      // for (let i = 0 ; i < birdPlain.length; i++) {
+      // console.log(birdPlain)
+      // }
+
+        res.status(200).json(birdPlain);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
