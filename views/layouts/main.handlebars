@@ -40,7 +40,7 @@
       <h4>{{username}}</h4>
     </div>
     <a class="w3-bar-item w3-button " href="/home" onclick="closeSidebar()">Home</a>
-    <a class="w3-bar-item w3-button " href="/map" onclick="closeSidebar()">Map</a>
+    <a class="w3-bar-item w3-button " href="/map" onclick="closeSidebar()">Add Sighting</a>
     <a class="w3-bar-item w3-button " id="logout" href="/logout" onclick="closeSidebar()">Logout</a>
   </nav>
   <header class="w3-bar w3-card w3-theme">
@@ -52,19 +52,8 @@
 
   <div class="bird-container">
     {{{ body }}}
-    {{!-- {{#each birdcards as |birdcard|}}
-    {{/each}} --}}
+
   </div>
-  
-  {{!-- birdcards --}}
-
-
-  {{!-- {{#if logged_in}} <a href="/profile">profile</a> |
-  <button onclick="fLogout()" id="logout" class="btn-no-style">Logout</button>
-  {{else}}
-  <a href="/login">Login</a>
-  {{/if}} --}}
-
 
   <div class="column1">
     <figure class="card code-card">

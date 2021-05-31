@@ -148,6 +148,7 @@ i {
   text-align: center;
 }
 
-.birdImg {
-  
+.allBirds a {
+  font-size: 20px;
+  color: rgb(3, 54, 3);
 }
