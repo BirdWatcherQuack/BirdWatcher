@@ -4,7 +4,6 @@ const { User, Bird } = require('../models');
 
 router.get('/', (req, res) => {
   res.render('loginbody', { layout: 'login' });
-  //console.log('Hello')
 })
 
 router.get('/home', async (req, res) => {
@@ -21,9 +20,9 @@ router.get('/home', async (req, res) => {
   }
 })
 
-router.get('/home/:id', async (req, res) => {
+router.get('/singlebird/:id', async (req, res) => {
   try {
-    const birdData = await Bird.findAll({});
+    const birdData = await Bird.findByPk(req.params.id);
     const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
     console.log('birdsArr', birdsArr)
     res.render('singlebird', {
