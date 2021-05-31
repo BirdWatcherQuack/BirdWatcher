@@ -13,21 +13,17 @@ router.get("/home", async (req, res) => {
       include: [
         {
           model: Bird,
-          attributes: ["bird_name", "description"],
+          attributes: ['bird_name', 'description'],
         },
       ],
     });
-    const birdsArr = birdData.map((bird) =>
-      bird.get({
-        plain: true,
-      })
-    );
-    console.log("birdsArr", birdsArr);
-    res.render("birdcard", {
+    const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
+    console.log('birdsArr', birdsArr)
+    res.render('birdcard', {
       //layout: 'main',
       //birdsArr: birdsArr
       birdsArr,
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     //console.log(err)
@@ -43,23 +39,21 @@ router.get("/singlebird/:id", async (req, res) => {
         {
           model: Bird,
           attributes: [
-            "id",
-            "bird_type",
-            "bird_name",
-            "latin_name",
-            "description",
+            'id',
+            'bird_type',
+            'bird_name',
+            'latin_name',
+            'description',
           ],
         },
       ],
     });
-    const birdsArr = birdData.get({
-      plain: true,
-    });
-    console.log("birdsArr", birdsArr);
-    res.render("singlebird", {
-      layout: "main",
+    const birdsArr = birdData.get({ plain: true });
+    console.log('birdsArr', birdsArr)
+    res.render('singlebird', {
+      layout: 'main',
       birdsArr,
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);
@@ -70,19 +64,15 @@ router.get("/singlebird/:id", async (req, res) => {
 router.get("/home", async (req, res, next) => {
   try {
     const userData = await User.findAll({
-      attributes: {
-        exclude: ["password"],
-      },
+      attributes: {exclude: ['password']}
     });
-    const user = userData.map((username) =>
-      username.get({
-        plain: true,
-      })
-    );
-    const user = userData.get({ plain: true });
-    res.render("username", {
+
+    // const user = userData.map((username) => username.get({ plain: true }));
+    const user = userData.get ({ plain: true });
+
+    res.render('username', {
       ...user,
-      loggedIn: true,
+      loggedIn:  true
     });
   } catch (err) {
     console.log(err);
@@ -108,5 +98,6 @@ router.get("/map", (req, res) => {
     layout: "main",
   });
 });
+
 
 module.exports = router;
