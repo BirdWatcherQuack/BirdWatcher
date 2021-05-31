@@ -147,3 +147,8 @@ i {
   font-weight: bold;
   text-align: center;
 }
+
+img {
+  height: 200px;
+  width: 300px;
+}

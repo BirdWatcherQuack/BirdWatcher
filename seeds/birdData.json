@@ -42,7 +42,7 @@
         "max_age": "28",
         "weight": "2",
         "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown.",
-        "bird_img": "SnowyOwl.jpg"
+        "bird_img": "SnowyOwl.jpeg"
     },
     {
         "bird_type": "Flycatchers",
@@ -168,7 +168,7 @@
         "max_age": "70",
         "weight": "4.50",
         "description": "he wood duck is a medium-sized perching duck. A typical adult is from 47 to 54 cm (19 to 21 in) ( or 1.5 feet max.) In length with a wingspan of between 66 to 73 cm (26 to 29 in). The wood duck's weight ranges from 454-862 g (16.0-30.4 oz).[4]This is about three-quarters of the length of an adult mallard. It shares its genus with the Asian Mandarin duck (Aix galericulata).",
-        "bird_img": "Trumpeter swans.jpg"
+        "bird_img": "Wood Duck.jpg"
     },
     {
         "bird_type": "Owl",
