@@ -30,6 +30,21 @@ function onMapClick(e) {
   // myOttawaMap.on('click', addMarker(lat, long))
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('/api/birds/names', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+
+
 const birdList = [
     "Mourning doves",
     "Barred owl",
@@ -61,17 +76,41 @@ $("#bird-type").autocomplete({
 
 document.getElementById("submitButton").addEventListener("click", function () {
   const birdType = document.getElementById("bird-type").value
-  // console.log(birdType)
   const latLongSubmit = document.getElementById("lat-long-input").value
-  // console.log(latLongSubmit)
 
   const dataPackage = {
-    bird: birdType,
-    sighting: latLongSubmit
+    bird_name: birdType,
+    user_id: "null",
+    coordinates: latLongSubmit
   }
 
-  console.log(dataPackage)
-})
+  // api/birds/
+  fetch('/api/birds/sightings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dataPackage),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        alert('Yay! Your bird has been submitted!');
+      } else {
+        alert('Sorry, your bird has not been submitted');
+
+        // Clear the form
+        birdType = '';
+        latLongSubmit = '';
+      }
+      console.log(dataPackage)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+  
 
 // //hide view map link when in full page mode
 // function myFunction() {

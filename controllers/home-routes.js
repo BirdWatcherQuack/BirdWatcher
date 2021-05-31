@@ -4,7 +4,6 @@ const { User, Bird } = require('../models');
 
 router.get('/', (req, res) => {
   res.render('loginbody', { layout: 'login' });
-  //console.log('Hello')
 })
 
 router.get('/home', async (req, res) => {
