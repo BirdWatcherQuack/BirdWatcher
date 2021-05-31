@@ -151,4 +151,10 @@ i {
 .allBirds a {
   font-size: 20px;
   color: rgb(3, 54, 3);
+
+}
+
+img {
+  height: 200px;
+  width: 300px;
 }
