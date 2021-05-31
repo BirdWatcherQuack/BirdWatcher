@@ -37,9 +37,7 @@
         <img class="w3-circle" src="/images/duck_right.png" alt="avatar" style="width:75%">
       </div>
       {{!-- we need to include username to show under pic --}}
-       <div>
-         <h4>Username: {{user.username}}</h4>
-       </div> 
+      <h4>{{username}}</h4>
     </div>
     <a class="w3-bar-item w3-button " href="/home" onclick="closeSidebar()">Home</a>
     <a class="w3-bar-item w3-button " href="/map" onclick="closeSidebar()">Map</a>
@@ -53,10 +51,11 @@
 
 
   <div class="bird-container">
-    {{{body}}}
+    {{{ body }}}
     {{!-- {{#each birdcards as |birdcard|}}
     {{/each}} --}}
   </div>
+  
   {{!-- birdcards --}}
 
 
@@ -65,8 +64,6 @@
   {{else}}
   <a href="/login">Login</a>
   {{/if}} --}}
-
-
 
 
   <div class="column1">

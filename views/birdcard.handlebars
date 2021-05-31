@@ -1,4 +1,7 @@
-<link rel="stylesheet" type="text/css" href="/css/birdcards.css" />
+{{!--
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> --}}
+<link rel="stylesheet" type="text/css" href="/css/birdcards.css" /> 
 {{#each birdsArr as |bird|}}
 <div data-birdid="{{bird.id}}" class="bird-card">
   <div class="face face1">
@@ -10,13 +13,15 @@
     <div class="content">
       <div>
         <div class="birdName">
-          {{bird.bird_name}}
+          {{bird_name}}
         </div>
       </div>
 
     </div>
     <div class="readMore">
-      <a onclick="viewBird()" href="/singlebird">Read More</a>
+      <a href="/singlebird/{{id}}">Read More</a>
+      {{!-- <a onclick="viewBird()" href="/singlebird">Read More</a> --}}
+
     </div>
   </div>
 </div>
