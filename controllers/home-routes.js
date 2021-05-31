@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Sequelize = require('sequelize');
 const { User, Bird } = require("../models");
 
 router.get("/", (req, res) => {
@@ -9,34 +10,33 @@ router.get("/", (req, res) => {
 
 router.get("/home", async (req, res) => {
   try {
-    const birdData = await Bird.findAll({});
-    const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
-    // console.log('birdsArr', birdsArr)
-    res.render('birdcard', {
-      layout: 'main',
-      birdsArr: birdsArr
-    });
+    const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 6 }).then((encounters) => {
+      const birdRandomCards = []
+      for (let i = 0; i < encounters.length; i++) {
+        let thisBird = encounters[i].get({ plain: true })
+        birdRandomCards.push(thisBird)
+      }
+      res.render('birdcard', {
+        layout: 'main',
+        birdsArr: birdRandomCards
+      });
+    })
   } catch (err) {
-
     res.status(500).json(err);
   }
 });
 
 router.get("/singlebird/:id", async (req, res) => {
   try {
-    //const birdData = await Bird.findAll({});
-    const birdsData = await Bird.findByPk(req.params.id, {
-
-    });
+    const birdsData = await Bird.findByPk(req.params.id);
     const birdsArr = birdsData.get({ plain: true });
     console.log('birdsArr', birdsArr)
     res.render('singlebird', {
       layout: 'main',
       birdsArr: birdsArr,
-      // loggedIn: req.session.loggedIn
     });
   } catch (err) {
-    console.log(err);
+    console.log(err)
     // res.status(500).json(err);
   }
 });
