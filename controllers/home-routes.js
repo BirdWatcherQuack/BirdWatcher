@@ -9,24 +9,15 @@ router.get("/", (req, res) => {
 
 router.get("/home", async (req, res) => {
   try {
-    const birdData = await User.findAll({
-      include: [
-        {
-          model: Bird,
-          attributes: ['bird_name', 'description'],
-        },
-      ],
-    });
+    const birdData = await Bird.findAll({});
     const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
     console.log('birdsArr', birdsArr)
     res.render('birdcard', {
-      //layout: 'main',
-      //birdsArr: birdsArr
-      birdsArr,
-      loggedIn: req.session.loggedIn
+      layout: 'main',
+      birdsArr: birdsArr
     });
   } catch (err) {
-    //console.log(err)
+
     res.status(500).json(err);
   }
 });
@@ -34,21 +25,10 @@ router.get("/home", async (req, res) => {
 router.get("/singlebird/:id", async (req, res) => {
   try {
     //const birdData = await Bird.findAll({});
-    const birdData = await User.findByPk(req.params.id, {
-      include: [
-        {
-          model: Bird,
-          attributes: [
-            'id',
-            'bird_type',
-            'bird_name',
-            'latin_name',
-            'description',
-          ],
-        },
-      ],
+    const birdsData = await Bird.findByPk(req.params.id, {
+
     });
-    const birdsArr = birdData.get({ plain: true });
+    const birdsArr = birdsData.get({ plain: true });
     console.log('birdsArr', birdsArr)
     res.render('singlebird', {
       layout: 'main',
@@ -57,22 +37,22 @@ router.get("/singlebird/:id", async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    // res.status(500).json(err);
   }
 });
 
 router.get("/home", async (req, res, next) => {
   try {
     const userData = await User.findAll({
-      attributes: {exclude: ['password']}
+      attributes: { exclude: ['password'] }
     });
 
     // const user = userData.map((username) => username.get({ plain: true }));
-    const user = userData.get ({ plain: true });
+    const user = userData.get({ plain: true });
 
     res.render('username', {
       ...user,
-      loggedIn:  true
+      loggedIn: true
     });
   } catch (err) {
     console.log(err);
