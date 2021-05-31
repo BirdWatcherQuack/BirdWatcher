@@ -30,6 +30,21 @@ function onMapClick(e) {
   // myOttawaMap.on('click', addMarker(lat, long))
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('/api/birds/names', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+
+
 const birdList = [
     "Mourning doves",
     "Barred owl",

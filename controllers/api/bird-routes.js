@@ -51,9 +51,9 @@ router.get('/names', async (req, res) => {
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
         const namesList = []
         for (let i = 0; i < birdPlain.length; i++) {
-            console.log(birdPlain[i].bird_name)
             namesList.push(birdPlain[i].bird_name)
         }
+        console.log(namesList)
         res.status(200).json(namesList);
     } catch {
         res.status(500).json(err);
@@ -122,23 +122,23 @@ router.post('/', async (req, res) => {
   });
 
 
-  router.delete('/:id', async (req, res) => {
-    try {
-      const birdData = await Bird.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-  
-      if (!birdData) {
-        res.status(404).json({ message: 'No bird found with that id!' });
-        return;
-      }
-  
-      res.status(200).json(categoryData);
-    } catch (err) {
-      res.status(500).json(err);
+router.delete('/:id', async (req, res) => {
+try {
+    const birdData = await Bird.destroy({
+    where: {
+        id: req.params.id,
+    },
+    });
+
+    if (!birdData) {
+    res.status(404).json({ message: 'No bird found with that id!' });
+    return;
     }
-  });
+
+    res.status(200).json(categoryData);
+} catch (err) {
+    res.status(500).json(err);
+}
+});
 
 module.exports = router;
