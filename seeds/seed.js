@@ -10,14 +10,20 @@ const locationData = require('./sightingData.json')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
-  await Bird.bulkCreate(birdData, {
-    individualHooks: true,
-    returning: true,
-  });
+  //await Bird.bulkCreate(birdData, {
+  //  individualHooks: true,
+  //  returning: true,
+  //});
+  for (const bird of birdData) {
+    await Bird.create({
+      ...bird,
+      bird_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
   await Location.bulkCreate(locationData, {
     individualHooks: true,
     returning: true,
