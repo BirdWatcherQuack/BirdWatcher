@@ -14,7 +14,8 @@
         "latin_name": "Zenaida macroura",
         "max_age": "31",
         "weight": "2",
-        "description": "Mourning doves are light grey and brown and generally muted in color. Males and females are similar in appearance. The species is generally monogamous, with two squabs (young) per brood. Both parents incubate and care for the young. Mourning doves eat almost exclusively seeds, but the young are fed crop milk by their parents."
+        "description": "Mourning doves are light grey and brown and generally muted in color. Males and females are similar in appearance. The species is generally monogamous, with two squabs (young) per brood. Both parents incubate and care for the young. Mourning doves eat almost exclusively seeds, but the young are fed crop milk by their parents.",
+        "bird_img": "MourningDoves.jpg"
     },
     {
         "bird_type": "Hummingbird",
@@ -22,7 +23,8 @@
         "latin_name": "Archilochus colubris",
         "max_age": "6",
         "weight": "3",
-        "description": "The ruby-throated hummingbird (Archilochus colubris) is a species of hummingbird that generally spends the winter in Central America, Mexico, and Florida, and migrates to Canada and other parts of Eastern North America for the summer to breed. It is by far the most common hummingbird seen east of the Mississippi River in North America."
+        "description": "The ruby-throated hummingbird (Archilochus colubris) is a species of hummingbird that generally spends the winter in Central America, Mexico, and Florida, and migrates to Canada and other parts of Eastern North America for the summer to breed. It is by far the most common hummingbird seen east of the Mississippi River in North America.",
+        "bird_img": "Ruby-throatedHummingbird.jpg"
     },
     {
         "bird_type": "Raptors",
@@ -30,7 +32,8 @@
         "latin_name": "Haliaeetus leucocephalus",
         "max_age": "70",
         "weight": "9",
-        "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting."
+        "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting.",
+        "bird_img": "baldEagle.jpg"
     },
     {
         "bird_type": "Owl",
@@ -38,7 +41,8 @@
         "latin_name": "Bubo scandiacus",
         "max_age": "28",
         "weight": "2",
-        "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown."
+        "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown.",
+        "bird_img": "SnowyOwl.jpg"
     },
     {
         "bird_type": "Flycatchers",
@@ -46,7 +50,8 @@
         "latin_name": "Myiarchus crinitus",
         "max_age": "10",
         "weight": "4",
-        "description": "The great crested flycatcher (Myiarchus crinitus) is a large insect-eating bird of the tyrant flycatcher family. It is the most widespread member of the genus Myiarchus in North America, and is found over most of the eastern and mid-western portions of the continent."
+        "description": "The great crested flycatcher (Myiarchus crinitus) is a large insect-eating bird of the tyrant flycatcher family. It is the most widespread member of the genus Myiarchus in North America, and is found over most of the eastern and mid-western portions of the continent.",
+        "bird_img": "GreatCrestedFlycatcher.jpg"
     },
     {
         "bird_type": "Woodpeckers",
@@ -54,7 +59,8 @@
         "latin_name": "Dryocopus pileatus",
         "max_age": "12",
         "weight": "4",
-        "description": "The pileated woodpecker (Dryocopus pileatus) is a large, mostly black woodpecker native to North America. An insectivore, it inhabits deciduous forests in eastern North America, the Great Lakes, the boreal forests of Canada, and parts of the Pacific Coast. It is the second largest woodpecker species in the U.S., behind the critically endangered or possibly extinct ivory-billed woodpecker."
+        "description": "The pileated woodpecker (Dryocopus pileatus) is a large, mostly black woodpecker native to North America. An insectivore, it inhabits deciduous forests in eastern North America, the Great Lakes, the boreal forests of Canada, and parts of the Pacific Coast. It is the second largest woodpecker species in the U.S., behind the critically endangered or possibly extinct ivory-billed woodpecker.",
+        "bird_img": "PileatedWoodpecker.jpg"
     },
     {
         "bird_type": "Swallows",
@@ -62,7 +68,8 @@
         "latin_name": "Tachycineta bicolor",
         "max_age": "12",
         "weight": "3",
-        "description": "The tree swallow (Tachycineta bicolor) is a migratory bird of the family Hirundinidae. Found in the Americas, the tree swallow was first described in 1807 by French ornithologist Louis Vieillot as Hirundo bicolor. It has since been moved to its current genus, Tachycineta, within which its phylogenetic placement is debated. The tree swallow has glossy blue-green upperparts, with the exception of the blackish wings and tail, and white underparts. The bill is black, the eyes dark brown, and the legs and feet pale brown. The female is generally duller than the male, and the first-year female has mostly brown upperparts, with some blue feathers. Juveniles have brown upperparts, and a grey-brown-washed breast. The tree swallow breeds in the US and Canada. It winters along southern US coasts south, along the Gulf Coast, to Panama and the northwestern coast of South America, and in the West Indies."
+        "description": "The tree swallow (Tachycineta bicolor) is a migratory bird of the family Hirundinidae. Found in the Americas, the tree swallow was first described in 1807 by French ornithologist Louis Vieillot as Hirundo bicolor. It has since been moved to its current genus, Tachycineta, within which its phylogenetic placement is debated. The tree swallow has glossy blue-green upperparts, with the exception of the blackish wings and tail, and white underparts. The bill is black, the eyes dark brown, and the legs and feet pale brown. The female is generally duller than the male, and the first-year female has mostly brown upperparts, with some blue feathers. Juveniles have brown upperparts, and a grey-brown-washed breast. The tree swallow breeds in the US and Canada. It winters along southern US coasts south, along the Gulf Coast, to Panama and the northwestern coast of South America, and in the West Indies.",
+        "bird_img": "TreeSwallow.jpeg"
     },
     {
         "bird_type": "Geese",
@@ -70,7 +77,8 @@
         "latin_name": "Branta canadensis",
         "max_age": "24",
         "weight": "8",
-        "description": "The Canada goose (Branta canadensis) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and its migration occasionally reaches across the Atlantic to northern Europe. It has been introduced to the United Kingdom, Ireland, Finland, Sweden, Denmark, New Zealand, Japan, Chile, Argentina and the Falkland Islands.[2] Like most geese, the Canada goose is primarily herbivorous and normally migratory; it tends to be found on or close to fresh water."
+        "description": "The Canada goose (Branta canadensis) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and its migration occasionally reaches across the Atlantic to northern Europe. It has been introduced to the United Kingdom, Ireland, Finland, Sweden, Denmark, New Zealand, Japan, Chile, Argentina and the Falkland Islands.[2] Like most geese, the Canada goose is primarily herbivorous and normally migratory; it tends to be found on or close to fresh water.",
+        "bird_img": "CanadaGoose.jpg"
     },
     {
         "bird_type": "Duck",
@@ -78,7 +86,8 @@
         "latin_name": "Anas platyrhynchos",
         "max_age": "10",
         "weight": "10",
-        "description": "The mallard (/ˈmælɑːrd, ˈmælərd/) or wild duck (Anas platyrhynchos) is a dabbling duck that breeds throughout the temperate and subtropical Americas, Eurasia, and North Africa, and has been introduced to New Zealand, Australia, Peru, Brazil, Uruguay, Argentina, Chile, Colombia, the Falkland Islands, and South Africa. This duck belongs to the subfamily Anatinae of the waterfowl family Anatidae. The male birds (drakes) have a glossy green head and are grey on their wings and belly, while the females (hens or ducks) have mainly brown-speckled plumage. Both sexes have an area of white-bordered black or iridescent blue feathers called a speculum on their wings; males especially tend to have blue speculum feathers. The mallard is 50–65 cm (20–26 in) long, of which the body makes up around two-thirds the length. The wingspan is 81–98 cm (32–39 in) and the bill is 4.4 to 6.1 cm (1.7 to 2.4 in) long. It is often slightly heavier than most other dabbling ducks, weighing 0.7–1.6 kg (1.5–3.5 lb). Mallards live in wetlands, eat water plants and small animals, and are social animals preferring to congregate in groups or flocks of varying sizes. This species is the main ancestor of most breeds of domestic ducks."
+        "description": "The mallard (/ˈmælɑːrd, ˈmælərd/) or wild duck (Anas platyrhynchos) is a dabbling duck that breeds throughout the temperate and subtropical Americas, Eurasia, and North Africa, and has been introduced to New Zealand, Australia, Peru, Brazil, Uruguay, Argentina, Chile, Colombia, the Falkland Islands, and South Africa. This duck belongs to the subfamily Anatinae of the waterfowl family Anatidae. The male birds (drakes) have a glossy green head and are grey on their wings and belly, while the females (hens or ducks) have mainly brown-speckled plumage. Both sexes have an area of white-bordered black or iridescent blue feathers called a speculum on their wings; males especially tend to have blue speculum feathers. The mallard is 50–65 cm (20–26 in) long, of which the body makes up around two-thirds the length. The wingspan is 81–98 cm (32–39 in) and the bill is 4.4 to 6.1 cm (1.7 to 2.4 in) long. It is often slightly heavier than most other dabbling ducks, weighing 0.7–1.6 kg (1.5–3.5 lb). Mallards live in wetlands, eat water plants and small animals, and are social animals preferring to congregate in groups or flocks of varying sizes. This species is the main ancestor of most breeds of domestic ducks.",
+        "bird_img": "Mallards.jpeg"
     },
     {
         "bird_type": "Swan",
@@ -86,7 +95,8 @@
         "latin_name": "Cygnus olor",
         "max_age": "40",
         "weight": "12",
-        "description": "The mute swan (Cygnus olor) is a species of swan and a member of the waterfowl family Anatidae. It is native to much of Eurosiberia, and (as a rare winter visitor) the far north of Africa. It is an introduced species in North America – home to the largest populations outside of its native range – with additional smaller introductions in Australasia and southern Africa. The name 'mute' derives from it being less vocal than other swan species. Measuring 125 to 170 cm (49 to 67 in) in length, this large swan is wholly white in plumage with an orange beak bordered with black. It is recognisable by its pronounced knob atop the beak, which is larger in males."
+        "description": "The mute swan (Cygnus olor) is a species of swan and a member of the waterfowl family Anatidae. It is native to much of Eurosiberia, and (as a rare winter visitor) the far north of Africa. It is an introduced species in North America – home to the largest populations outside of its native range – with additional smaller introductions in Australasia and southern Africa. The name 'mute' derives from it being less vocal than other swan species. Measuring 125 to 170 cm (49 to 67 in) in length, this large swan is wholly white in plumage with an orange beak bordered with black. It is recognisable by its pronounced knob atop the beak, which is larger in males.",
+        "bird_img": "MuteSwan.jpg"
     },
     {
         "bird_type": "Duck",
@@ -94,7 +104,8 @@
         "latin_name": "Anas rubripes",
         "max_age": "26",
         "weight": "2",
-        "description": "The American black duck (Anas rubripes) is a large dabbling duck in the family Anatidae. It was described by William Brewster in 1902. It is the heaviest species in the genus Anas, weighing 720–1,640 g (1.59–3.62 lb) on average and measuring 54–59 cm (21–23 in) in length with a 88–95 cm (35–37 in) wingspan. It somewhat resembles the female mallard in coloration, but has a darker plumage. The male and female are generally similar in appearance, but the male's bill is yellow while the female's is dull green with dark marks on the upper mandible. It is native to eastern North America. During the breeding season, it is usually found in coastal and freshwater wetlands from Saskatchewan to the Atlantic in Canada and the Great Lakes and the Adirondacks in the United States. It is a partially migratory species, mostly wintering in the east-central United States, especially in coastal areas."
+        "description": "The American black duck (Anas rubripes) is a large dabbling duck in the family Anatidae. It was described by William Brewster in 1902. It is the heaviest species in the genus Anas, weighing 720–1,640 g (1.59–3.62 lb) on average and measuring 54–59 cm (21–23 in) in length with a 88–95 cm (35–37 in) wingspan. It somewhat resembles the female mallard in coloration, but has a darker plumage. The male and female are generally similar in appearance, but the male's bill is yellow while the female's is dull green with dark marks on the upper mandible. It is native to eastern North America. During the breeding season, it is usually found in coastal and freshwater wetlands from Saskatchewan to the Atlantic in Canada and the Great Lakes and the Adirondacks in the United States. It is a partially migratory species, mostly wintering in the east-central United States, especially in coastal areas.",
+        "bird_img": "BlackDuck.jpeg"
     },
     {
         "bird_type": "Woodpeckers",
@@ -102,7 +113,8 @@
         "latin_name": "Sphyrapicus varius",
         "max_age": "30",
         "weight": "5",
-        "description": "The yellow-bellied sapsucker was described and illustrated using a hand-coloured plate by the English naturalist Mark Catesby in his The Natural History of Carolina, Florida and the Bahama Islands which was published between 1729 and 1732. When in 1766 the Swedish naturalist Carl Linnaeus updated his Systema Naturae for the twelfth edition, he included the yellow-bellied sapsucker, coined the binomial name Picus varius and cited Catesby's book. The specific epithet varius is the Latin word meaning various, diverse or variegated.Linnaeus specified the type locality as America septentrionali (North America) but the locality is now restricted to South Carolina."
+        "description": "The yellow-bellied sapsucker was described and illustrated using a hand-coloured plate by the English naturalist Mark Catesby in his The Natural History of Carolina, Florida and the Bahama Islands which was published between 1729 and 1732. When in 1766 the Swedish naturalist Carl Linnaeus updated his Systema Naturae for the twelfth edition, he included the yellow-bellied sapsucker, coined the binomial name Picus varius and cited Catesby's book. The specific epithet varius is the Latin word meaning various, diverse or variegated.Linnaeus specified the type locality as America septentrionali (North America) but the locality is now restricted to South Carolina.",
+        "bird_img": "Yellow-belliedSapsucker.jpeg"
     },
     {
         "bird_type": "Sparrow",
@@ -110,7 +122,8 @@
         "latin_name": "Passer domesticus",
         "max_age": "14",
         "weight": ".4",
-        "description": "The house sparrow (Passer domesticus) is a bird of the sparrow family Passeridae, found in most parts of the world. It is a small bird that has a typical length of 16 cm (6.3 in) and a mass of 24–39.5 g (0.85–1.39 oz). Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings. One of about 25 species in the genus Passer, the house sparrow is native to most of Europe, the Mediterranean Basin, and a large part of Asia. Its intentional or accidental introductions to many regions, including parts of Australasia, Africa, and the Americas, make it the most widely distributed wild bird."
+        "description": "The house sparrow (Passer domesticus) is a bird of the sparrow family Passeridae, found in most parts of the world. It is a small bird that has a typical length of 16 cm (6.3 in) and a mass of 24–39.5 g (0.85–1.39 oz). Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings. One of about 25 species in the genus Passer, the house sparrow is native to most of Europe, the Mediterranean Basin, and a large part of Asia. Its intentional or accidental introductions to many regions, including parts of Australasia, Africa, and the Americas, make it the most widely distributed wild bird.",
+        "bird_img": "HouseSparrow.jpg"
     },
     {
         "bird_type": "Cranes",
@@ -118,7 +131,8 @@
         "latin_name": "Grus canadensis",
         "max_age": "20",
         "weight": "5.2",
-        "description": "The sandhill crane (Antigone canadensis) is a species of large crane of North America and extreme northeastern Siberia. The common name of this bird refers to habitat like that at the Platte River, on the edge of Nebraska's Sandhills on the American Plains. This is the most important stopover area for the nominotypical subspecies, the lesser sandhill crane (Antigone canadensis canadensis), with up to 450,000 of these birds migrating through annually"
+        "description": "The sandhill crane (Antigone canadensis) is a species of large crane of North America and extreme northeastern Siberia. The common name of this bird refers to habitat like that at the Platte River, on the edge of Nebraska's Sandhills on the American Plains. This is the most important stopover area for the nominotypical subspecies, the lesser sandhill crane (Antigone canadensis canadensis), with up to 450,000 of these birds migrating through annually",
+        "bird_img": "SandhillCranes.jpg"
     },
     {
         "bird_type": "Kinglet",
@@ -126,7 +140,8 @@
         "latin_name": "Regulus calendula",
         "max_age": "10",
         "weight": ".8",
-        "description": "Ruby-crowned kinglets (Regulus calendula) are native to northern, western, and some eastern parts of North America. Their breeding range includes most of Alaska, the majority of Canada, a small portion of the Rocky Mountains, and the northern parts of the Great Lakes. Ruby-crowned kinglets live year-round in parts of the western United States and in the southwestern portion of Canada. Their winter range extends from the southeastern to western United States and dips south into Mexico and Central America. There are also two records of ruby-crowned kinglets in Greenland and another record from Iceland."
+        "description": "Ruby-crowned kinglets (Regulus calendula) are native to northern, western, and some eastern parts of North America. Their breeding range includes most of Alaska, the majority of Canada, a small portion of the Rocky Mountains, and the northern parts of the Great Lakes. Ruby-crowned kinglets live year-round in parts of the western United States and in the southwestern portion of Canada. Their winter range extends from the southeastern to western United States and dips south into Mexico and Central America. There are also two records of ruby-crowned kinglets in Greenland and another record from Iceland.",
+        "bird_img": "Ruby-crowned.jpeg"
     },
     {
         "bird_type": "Duck",
@@ -134,7 +149,8 @@
         "latin_name": "Anas carolinensis",
         "max_age": "17",
         "weight": "3.6",
-        "description": "The green-winged teal (Anas carolinensis) is a common and widespread duck that breeds in the northern areas of North America except on the Aleutian Islands. It was considered conspecific with the Eurasian teal (A. crecca), for some time but the issue is still being reviewed by the American Ornithological Society. However, nearly all other authorities consider it distinct based on behavioral, morphological, and molecular evidence.The scientific name is from Latin Anas, duck and carolinensis, of Carolina."
+        "description": "The green-winged teal (Anas carolinensis) is a common and widespread duck that breeds in the northern areas of North America except on the Aleutian Islands. It was considered conspecific with the Eurasian teal (A. crecca), for some time but the issue is still being reviewed by the American Ornithological Society. However, nearly all other authorities consider it distinct based on behavioral, morphological, and molecular evidence.The scientific name is from Latin Anas, duck and carolinensis, of Carolina.",
+        "bird_img": "Green-winged teal.jpg"
     },
     {
         "bird_type": "Swans",
@@ -142,7 +158,8 @@
         "latin_name": "Cygnus buccinator",
         "max_age": "20",
         "weight": "14",
-        "description": "The trumpeter swan (Cygnus buccinator) is a species of swan found in North America. The heaviest living bird native to North America, it is also the largest extant species of waterfowl, with a wingspan of 185 to 250 cm (6 ft 2 in to 8 ft 2 in). It is the American counterpart and a close relative of the whooper swan (Cygnus cygnus) of Eurasia, and even has been considered the same species by some authorities. By 1933, fewer than 70 wild trumpeters were known to exist, and extinction seemed imminent, until aerial surveys discovered a Pacific population of several thousand trumpeters around Alaska's Copper River. Careful reintroductions by wildlife agencies and the Trumpeter Swan Society gradually restored the North American wild population to over 46,000 birds by 2010.[5]"
+        "description": "The trumpeter swan (Cygnus buccinator) is a species of swan found in North America. The heaviest living bird native to North America, it is also the largest extant species of waterfowl, with a wingspan of 185 to 250 cm (6 ft 2 in to 8 ft 2 in). It is the American counterpart and a close relative of the whooper swan (Cygnus cygnus) of Eurasia, and even has been considered the same species by some authorities. By 1933, fewer than 70 wild trumpeters were known to exist, and extinction seemed imminent, until aerial surveys discovered a Pacific population of several thousand trumpeters around Alaska's Copper River. Careful reintroductions by wildlife agencies and the Trumpeter Swan Society gradually restored the North American wild population to over 46,000 birds by 2010.[5]",
+        "bird_img": "Trumpeter swans.jpg"
     },
     {
         "bird_type": "DuckWood Duck",
@@ -150,7 +167,8 @@
         "latin_name": "Aix sponsa",
         "max_age": "70",
         "weight": "4.50",
-        "description": "he wood duck is a medium-sized perching duck. A typical adult is from 47 to 54 cm (19 to 21 in) ( or 1.5 feet max.) In length with a wingspan of between 66 to 73 cm (26 to 29 in). The wood duck's weight ranges from 454-862 g (16.0-30.4 oz).[4]This is about three-quarters of the length of an adult mallard. It shares its genus with the Asian Mandarin duck (Aix galericulata)."
+        "description": "he wood duck is a medium-sized perching duck. A typical adult is from 47 to 54 cm (19 to 21 in) ( or 1.5 feet max.) In length with a wingspan of between 66 to 73 cm (26 to 29 in). The wood duck's weight ranges from 454-862 g (16.0-30.4 oz).[4]This is about three-quarters of the length of an adult mallard. It shares its genus with the Asian Mandarin duck (Aix galericulata).",
+        "bird_img": "Trumpeter swans.jpg"
     },
     {
         "bird_type": "Owl",
@@ -158,6 +176,7 @@
         "latin_name": "Asio otus",
         "max_age": "27",
         "weight": "2.5",
-        "description": "The long-eared owl (Asio otus), also known as the northern long-eared owl or, more informally, as the lesser horned owl or cat owl, is a medium-sized species of owl with an extensive breeding range. The scientific name is from Latin. The genus name Asio is a type of eared owl, and otus also refers to a small, eared owl. The species breeds in many areas through Europe and the Palearctic, as well as in North America. This species is a part of the larger grouping of owls known as typical owls, of the family Strigidae, which contains most extant species of owl (while the other taxonomic family of owls are the barn owls, or Tytonidae)."
+        "description": "The long-eared owl (Asio otus), also known as the northern long-eared owl or, more informally, as the lesser horned owl or cat owl, is a medium-sized species of owl with an extensive breeding range. The scientific name is from Latin. The genus name Asio is a type of eared owl, and otus also refers to a small, eared owl. The species breeds in many areas through Europe and the Palearctic, as well as in North America. This species is a part of the larger grouping of owls known as typical owls, of the family Strigidae, which contains most extant species of owl (while the other taxonomic family of owls are the barn owls, or Tytonidae).",
+        "bird_img": "Long-eared owl.jpg"
     }
 ]
