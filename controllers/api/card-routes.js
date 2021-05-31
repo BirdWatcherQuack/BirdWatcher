@@ -7,31 +7,25 @@ const { Bird, Location, User } = require('../../models');
 router.get('/', async (req, res) => {
   try {
         const dbBirdData = await Bird.findAll();
-        const birdPlainText = dbBirdData[i].get({ plain: true })
-        // const birdList = []
-        // for (let i = 0 ; i < dbBirdData.length; i++) {
-        //   const birdOfChoice = dbBirdData[i].get({ plain: true })
-        //   const birdPackage = {
-        //     id: birdOfChoice.id,
-        //     bird_type: birdOfChoice.bird_type,
-        //     bird_name: birdOfChoice.bird_name,
-        //     latin_name: birdOfChoice.latin_name,
-        //     max_age: birdOfChoice.max_age,
-        //     weight: birdOfChoice.weight,
-        //     description: birdOfChoice.description,
-        //     bird_img: birdOfChoice.bird_img
-        //   }
-        //   birdList.push(birdPackage)
-        // }
-        // console.log(birdList)
+        const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
 
-        res.status(200).json(birdPlainText);
+        birdPlain.sort(function(a, b){
+          if(a.bird_name < b.bird_name) { return -1; }
+          if(a.bird_name > b.bird_name) { return 1; }
+          return 0;
+      })
+      for (let i = 0 ; i < birdPlain.length; i++) {
+      console.log(birdPlain)
+      }
+
+        res.status(200).json(birdPlain);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   });
 
+  // ✔️ is expressed in /home
 router.get('/random', async (req, res) => {
       // const dbBirdData = await Bird.findAll();
       const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 5 }).then((encounters) => {

@@ -3,6 +3,7 @@ const { Bird, Location, User } = require('../../models');
 
 // for api/birds/
 
+// ✔️ gets all birds
 router.get('/', async (req, res) => {
     try {
       const dbBirdData = await Bird.findAll();
@@ -14,6 +15,8 @@ router.get('/', async (req, res) => {
     }
   });
 
+
+  // ✔️ gets a bird's sightings based on its id
   router.get('/sightings/:id', async (req, res) => {
     try {
           const dbBirdData = await Bird.findByPk(req.params.id);
@@ -45,6 +48,7 @@ router.get('/', async (req, res) => {
       }
     });
 
+// ✔️  returns an array of bird names from the database
 router.get('/names', async (req, res) => {
     try {
         const dbBirdData = await Bird.findAll();
@@ -60,6 +64,7 @@ router.get('/names', async (req, res) => {
     }
 });
 
+// ✔️ gets the bird by its ID
 router.get('/:id', async (req, res) => {
 try {
     const dbBirdData = await Bird.findByPk(req.params.id);
@@ -75,6 +80,7 @@ try {
 }
 });
 
+// ✔️ Creates a new owl
 router.post('/', async (req, res) => {
     try { 
       const birdData = await Bird.create({
@@ -121,7 +127,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-
+// ✔️ makes the entire bird species in question extinct
 router.delete('/:id', async (req, res) => {
 try {
     const birdData = await Bird.destroy({

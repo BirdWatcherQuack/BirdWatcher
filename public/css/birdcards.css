@@ -148,6 +148,12 @@ i {
   text-align: center;
 }
 
+.allBirds a {
+  font-size: 20px;
+  color: rgb(3, 54, 3);
+
+}
+
 img {
   height: 100%;
   width: 100%;
