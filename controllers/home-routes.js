@@ -11,7 +11,7 @@ router.get("/home", async (req, res) => {
   try {
     const birdData = await Bird.findAll({});
     const birdsArr = birdData.map((bird) => bird.get({ plain: true }));
-    console.log('birdsArr', birdsArr)
+    // console.log('birdsArr', birdsArr)
     res.render('birdcard', {
       layout: 'main',
       birdsArr: birdsArr
@@ -32,8 +32,8 @@ router.get("/singlebird/:id", async (req, res) => {
     console.log('birdsArr', birdsArr)
     res.render('singlebird', {
       layout: 'main',
-      birdsArr,
-      loggedIn: req.session.loggedIn
+      birdsArr: birdsArr,
+      // loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);
