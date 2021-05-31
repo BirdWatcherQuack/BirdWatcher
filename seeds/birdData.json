@@ -33,7 +33,7 @@
         "max_age": "70",
         "weight": "9",
         "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting.",
-        "bird_img": "baldEagle.jpg"
+        "bird_img": "baldEagle2.webp"
     },
     {
         "bird_type": "Owl",
@@ -42,7 +42,7 @@
         "max_age": "28",
         "weight": "2",
         "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown.",
-        "bird_img": "SnowyOwl.jpeg"
+        "bird_img": "SnowyOwl2.jpg"
     },
     {
         "bird_type": "Flycatchers",
@@ -60,7 +60,7 @@
         "max_age": "12",
         "weight": "4",
         "description": "The pileated woodpecker (Dryocopus pileatus) is a large, mostly black woodpecker native to North America. An insectivore, it inhabits deciduous forests in eastern North America, the Great Lakes, the boreal forests of Canada, and parts of the Pacific Coast. It is the second largest woodpecker species in the U.S., behind the critically endangered or possibly extinct ivory-billed woodpecker.",
-        "bird_img": "PileatedWoodpecker.jpg"
+        "bird_img": "PileatedWoodpecker2.jpg"
     },
     {
         "bird_type": "Swallows",
@@ -96,7 +96,7 @@
         "max_age": "40",
         "weight": "12",
         "description": "The mute swan (Cygnus olor) is a species of swan and a member of the waterfowl family Anatidae. It is native to much of Eurosiberia, and (as a rare winter visitor) the far north of Africa. It is an introduced species in North America – home to the largest populations outside of its native range – with additional smaller introductions in Australasia and southern Africa. The name 'mute' derives from it being less vocal than other swan species. Measuring 125 to 170 cm (49 to 67 in) in length, this large swan is wholly white in plumage with an orange beak bordered with black. It is recognisable by its pronounced knob atop the beak, which is larger in males.",
-        "bird_img": "MuteSwan.jpg"
+        "bird_img": "MuteSwan2.jpeg"
     },
     {
         "bird_type": "Duck",
@@ -105,7 +105,7 @@
         "max_age": "26",
         "weight": "2",
         "description": "The American black duck (Anas rubripes) is a large dabbling duck in the family Anatidae. It was described by William Brewster in 1902. It is the heaviest species in the genus Anas, weighing 720–1,640 g (1.59–3.62 lb) on average and measuring 54–59 cm (21–23 in) in length with a 88–95 cm (35–37 in) wingspan. It somewhat resembles the female mallard in coloration, but has a darker plumage. The male and female are generally similar in appearance, but the male's bill is yellow while the female's is dull green with dark marks on the upper mandible. It is native to eastern North America. During the breeding season, it is usually found in coastal and freshwater wetlands from Saskatchewan to the Atlantic in Canada and the Great Lakes and the Adirondacks in the United States. It is a partially migratory species, mostly wintering in the east-central United States, especially in coastal areas.",
-        "bird_img": "BlackDuck.jpeg"
+        "bird_img": "BlackDuck2.jpeg"
     },
     {
         "bird_type": "Woodpeckers",
@@ -114,7 +114,7 @@
         "max_age": "30",
         "weight": "5",
         "description": "The yellow-bellied sapsucker was described and illustrated using a hand-coloured plate by the English naturalist Mark Catesby in his The Natural History of Carolina, Florida and the Bahama Islands which was published between 1729 and 1732. When in 1766 the Swedish naturalist Carl Linnaeus updated his Systema Naturae for the twelfth edition, he included the yellow-bellied sapsucker, coined the binomial name Picus varius and cited Catesby's book. The specific epithet varius is the Latin word meaning various, diverse or variegated.Linnaeus specified the type locality as America septentrionali (North America) but the locality is now restricted to South Carolina.",
-        "bird_img": "Yellow-belliedSapsucker.jpeg"
+        "bird_img": "yellowBellied2.jpg"
     },
     {
         "bird_type": "Sparrow",
@@ -123,7 +123,7 @@
         "max_age": "14",
         "weight": ".4",
         "description": "The house sparrow (Passer domesticus) is a bird of the sparrow family Passeridae, found in most parts of the world. It is a small bird that has a typical length of 16 cm (6.3 in) and a mass of 24–39.5 g (0.85–1.39 oz). Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings. One of about 25 species in the genus Passer, the house sparrow is native to most of Europe, the Mediterranean Basin, and a large part of Asia. Its intentional or accidental introductions to many regions, including parts of Australasia, Africa, and the Americas, make it the most widely distributed wild bird.",
-        "bird_img": "HouseSparrow.jpg"
+        "bird_img": "houseSparrow2.jpg"
     },
     {
         "bird_type": "Cranes",
@@ -132,7 +132,7 @@
         "max_age": "20",
         "weight": "5.2",
         "description": "The sandhill crane (Antigone canadensis) is a species of large crane of North America and extreme northeastern Siberia. The common name of this bird refers to habitat like that at the Platte River, on the edge of Nebraska's Sandhills on the American Plains. This is the most important stopover area for the nominotypical subspecies, the lesser sandhill crane (Antigone canadensis canadensis), with up to 450,000 of these birds migrating through annually",
-        "bird_img": "SandhillCranes.jpg"
+        "bird_img": "sandhillCranes2.jpg"
     },
     {
         "bird_type": "Kinglet",
@@ -141,7 +141,7 @@
         "max_age": "10",
         "weight": ".8",
         "description": "Ruby-crowned kinglets (Regulus calendula) are native to northern, western, and some eastern parts of North America. Their breeding range includes most of Alaska, the majority of Canada, a small portion of the Rocky Mountains, and the northern parts of the Great Lakes. Ruby-crowned kinglets live year-round in parts of the western United States and in the southwestern portion of Canada. Their winter range extends from the southeastern to western United States and dips south into Mexico and Central America. There are also two records of ruby-crowned kinglets in Greenland and another record from Iceland.",
-        "bird_img": "Ruby-crowned.jpeg"
+        "bird_img": "Ruby-crowned2.jpg"
     },
     {
         "bird_type": "Duck",
@@ -159,7 +159,7 @@
         "max_age": "20",
         "weight": "14",
         "description": "The trumpeter swan (Cygnus buccinator) is a species of swan found in North America. The heaviest living bird native to North America, it is also the largest extant species of waterfowl, with a wingspan of 185 to 250 cm (6 ft 2 in to 8 ft 2 in). It is the American counterpart and a close relative of the whooper swan (Cygnus cygnus) of Eurasia, and even has been considered the same species by some authorities. By 1933, fewer than 70 wild trumpeters were known to exist, and extinction seemed imminent, until aerial surveys discovered a Pacific population of several thousand trumpeters around Alaska's Copper River. Careful reintroductions by wildlife agencies and the Trumpeter Swan Society gradually restored the North American wild population to over 46,000 birds by 2010.[5]",
-        "bird_img": "Trumpeter swans.jpg"
+        "bird_img": "TrumpeterSwan2.jpg"
     },
     {
         "bird_type": "DuckWood Duck",
@@ -168,7 +168,7 @@
         "max_age": "70",
         "weight": "4.50",
         "description": "he wood duck is a medium-sized perching duck. A typical adult is from 47 to 54 cm (19 to 21 in) ( or 1.5 feet max.) In length with a wingspan of between 66 to 73 cm (26 to 29 in). The wood duck's weight ranges from 454-862 g (16.0-30.4 oz).[4]This is about three-quarters of the length of an adult mallard. It shares its genus with the Asian Mandarin duck (Aix galericulata).",
-        "bird_img": "Wood Duck.jpg"
+        "bird_img": "WoodDuck2.jpeg"
     },
     {
         "bird_type": "Owl",
