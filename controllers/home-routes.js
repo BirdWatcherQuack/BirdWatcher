@@ -26,21 +26,7 @@ router.get("/singlebird/:id", async (req, res) => {
   try {
     //const birdData = await Bird.findAll({});
     const birdsData = await Bird.findByPk(req.params.id, {
-      include: [
-        {
-          model: Bird,
-          attributes: [
-            'id',
-            'bird_img',
-            'bird_type',
-            'bird_name',
-            'latin_name',
-            'max_age',
-            'weight',
-            'description',
-          ],
-        },
-      ],
+
     });
     const birdsArr = birdsData.get({ plain: true });
     console.log('birdsArr', birdsArr)
