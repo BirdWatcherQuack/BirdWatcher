@@ -3,6 +3,11 @@ const Sequelize = require('sequelize');
 const { User, Bird } = require("../models");
 
 router.get("/", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/home');
+    return;
+
+  }
   res.render("loginbody", {
     layout: "login",
   });
@@ -64,28 +69,28 @@ router.get("/home", async (req, res, next) => {
 
 router.get('/homeall', async (req, res) => {
   try {
-      const dbBirdData = await Bird.findAll();
-      const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
+    const dbBirdData = await Bird.findAll();
+    const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
 
-      birdPlain.sort(function(a, b){
-        if(a.bird_name < b.bird_name) { return -1; }
-        if(a.bird_name > b.bird_name) { return 1; }
-        return 0;
-      })
-      res.render('birdcard', {
-        layout: 'main',
-        birdsArr: birdPlain
-      });
-      // for (let i = 0 ; i < birdPlain.length; i++) {
-      // console.log(birdPlain)
-      // }
+    birdPlain.sort(function (a, b) {
+      if (a.bird_name < b.bird_name) { return -1; }
+      if (a.bird_name > b.bird_name) { return 1; }
+      return 0;
+    })
+    res.render('birdcard', {
+      layout: 'main',
+      birdsArr: birdPlain
+    });
+    // for (let i = 0 ; i < birdPlain.length; i++) {
+    // console.log(birdPlain)
+    // }
 
-        res.status(200).json(birdPlain);
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+    res.status(200).json(birdPlain);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
