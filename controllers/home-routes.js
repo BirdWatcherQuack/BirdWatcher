@@ -49,7 +49,7 @@ router.get("/singlebird/:id", async (req, res) => {
   }
 });
 
-router.get("/home", async (req, res, next) => {
+router.get("/home", async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
@@ -58,7 +58,7 @@ router.get("/home", async (req, res, next) => {
     // const user = userData.map((username) => username.get({ plain: true }));
     const user = userData.get({ plain: true });
 
-    res.render('username', {
+    res.render('main', {
       ...user,
       loggedIn: true
     });
@@ -66,6 +66,38 @@ router.get("/home", async (req, res, next) => {
     console.log(err);
   }
 });
+
+router.get('/home', (req, res) => {
+  const { user: { username } = {} } = req;
+  res.render('main', {
+    username,
+  });
+});
+
+// router.get('/home', (req, res) => {
+//   User.findAll({
+//     attributes: { exclude: ['password'] },
+//     where: {
+//       user_id: req.session.user_id
+//     },
+//     include: [
+//       {
+//         model: User,
+//         attributes: ['username']
+//       }
+//     ]
+//   });
+//   const user = userData.get({ plain: true });
+//   res.render('username', {
+//     user,
+//     loggedIn: true
+
+//   })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.get('/homeall', async (req, res) => {
   try {

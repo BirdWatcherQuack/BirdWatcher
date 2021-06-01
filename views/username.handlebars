@@ -1,27 +1,5 @@
 {{!-- {{#with user.username as |user|}}
+<div></div>
 <h4>{{user.username}}</h4>
+</div>
 {{/with}} --}}
-
-{{!-- {{#each userArr as |user|}}
-{{user.username}}
-{{/each}} --}}
- <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
-    <div class="w3-container w3-theme-d2">
-      <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
-      <br>
-      <div class="w3-padding w3-center">
-        <img class="w3-circle" src="/images/duck_right.png" alt="avatar" style="width:75%">
-        <h4>Username: </h4>
-      </div>
-      {{!-- we need to include username to show under pic --}}
-    </div>
-    <a class="w3-bar-item w3-button " href="/home" onclick="closeSidebar()">Home</a>
-    <a class="w3-bar-item w3-button " href="/map" onclick="closeSidebar()">Map</a>
-    <a class="w3-bar-item w3-button " id="logout" href="/logout" onclick="closeSidebar()">Logout</a>
-  </nav>
-  <header class="w3-bar w3-card w3-theme">
-    <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme barColor" onclick="openSidebar()">&#9776;</button>
-    <img class="logo" src="/images/duck_left.png" alt="logo">
-    <h1 class="w3-bar-item headerName"><b>QUACK</b></h1>
-  </header>
- 
