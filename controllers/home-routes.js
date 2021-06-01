@@ -69,7 +69,7 @@ router.get("/home", async (req, res, next) => {
 
 router.get('/homeall', async (req, res) => {
   try {
-    const dbBirdData = await Bird.findAll();
+    const dbBirdData = await Bird.findAll({});
     const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
 
     birdPlain.sort(function (a, b) {
@@ -79,17 +79,23 @@ router.get('/homeall', async (req, res) => {
     })
     res.render('birdcard', {
       layout: 'main',
-      birdsArr: birdPlain
+      birdsArr: birdPlain,
+
     });
     // for (let i = 0 ; i < birdPlain.length; i++) {
     // console.log(birdPlain)
     // }
 
-    res.status(200).json(birdPlain);
+
+
+
+    // res.status(200).json(birdPlain);
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+
 });
 
 router.get("/termsofservice", (req, res) => {
