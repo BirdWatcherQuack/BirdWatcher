@@ -118,7 +118,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
       if (data) {
         alert('Yay! Your bird has been submitted!');
       } else {
-        alert('Sorry, your bird has not been submitted');  
+        alert('Sorry, your bird has not been submitted');
       }
       // clear the form
       birdType = '';
@@ -217,7 +217,4 @@ function singleBirdMarkerGenerator(idNum) {
       });
   })
 }
-
-
-
     
