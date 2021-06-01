@@ -29,11 +29,20 @@ a {
 }
 
 .barColor,
+.bName h4,
 h3,
 h1,
 nav,
 footer {
   color: rgb(3, 54, 3);
+}
+
+ 
+
+
+.bType  {
+ font-size: 25px;
+ margin-bottom: 3%;
 }
 
 footer a {
