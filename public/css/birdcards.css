@@ -153,7 +153,8 @@ i {
 
 }
 
-img {
-  height: 100%;
-  width: 100%;
+.birdImg  {
+  object-fit: fill ;
+  height: 200px;
+  width: 300px;
 }
