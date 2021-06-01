@@ -1,16 +1,45 @@
+// Map Creation and Bird Icon 
 var myOttawaMap = L.map('mapid').setView([45.422, -75.697], 12);
-
 const mapTileUrl = `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`
-
 const attribution =
   `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>`
 
 const openMapSetup = L.tileLayer(mapTileUrl, { attribution });
 openMapSetup.addTo(myOttawaMap)
 
-//marker fo the map
+const birdyIcon = L.icon({
+  iconUrl: '../images/birdy.png',
+  iconSize: [50, 65], // size of the icon
+  iconAnchor: [25, 64], // point of the icon which will correspond to marker's location
+  popupAnchor: [0, -58] //  point from which the popup should open relative to the iconAnchor
+});
+
+// This differentiates the type of URL (/maps vs /singlebird/:id /home)
+const thisUrl = window.location.href
+const splitUrl = thisUrl.split('/').reverse()
+const identifier = splitUrl[0]
+console.log(identifier)
+
+if (identifier === "map") {
+  console.log(`This is the ${identifier} page`)
+} else if (identifier === "home") {
+  console.log(`This is the ${identifier} page`)
+  homeBirdsMarkerGenerator()
+} else if (identifier === "homeall") {
+  console.log(`This is the ${identifier} page`)
+  homeBirdsMarkerGenerator()
+} else {
+  try {
+    const idToNum = parseInt(identifier)
+    console.log(idToNum)
+    console.log(typeof idToNum)
+    singleBirdMarkerGenerator(idToNum)
+  }
+  catch  {console.log(`This is the ${identifier} page`)}
+}
 
 
+// for /map 
 myOttawaMap.on('click', onMapClick);
 
 function onMapClick(e) {
@@ -22,8 +51,6 @@ function onMapClick(e) {
   var popup = L.popup();
   popup
     .setLatLng(e.latlng)
-  // .setContent(`Busted at ${lat.toFixed(4)}, ${long.toFixed(4)}. \n `)
-  // .openOn(myOttawaMap);
 
   function addMarker(x, y) {
 
@@ -31,17 +58,6 @@ function onMapClick(e) {
         .setLatLng(e.latlng)
         .setContent(`You found this bird at ${e.latlng.toString()}. Updating your coordinates`)
         .openOn(myOttawaMap);
-
-    // const birdyIcon = L.icon({
-    //   iconUrl: 'images/birdy.png',
-    //   iconSize: [50, 65], // size of the icon
-    //   iconAnchor: [25, 64], // point of the icon which will correspond to marker's location
-    //   popupAnchor: [0, -58] //  point from which the popup should open relative to the iconAnchor
-
-    // });
-    // L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`Busted at ${lat.toFixed(4)}, ${long.toFixed(4)}. \n `);
-    // var marker = L.marker([x, y]).addTo(myOttawaMap);
-    // document.getElementById("text").textContent = `${x},${y}`
   }
 
   myOttawaMap.on('click', addMarker(lat, long))
@@ -55,42 +71,21 @@ document.addEventListener("DOMContentLoaded", function () {
       'Content-Type': 'application/json',
     },
   })
-    .then((response) => console.log("back-end route for /api/birds/names", response))
+    .then((response) => {
+      // console.log("back-end route for /api/birds/names", response)
+      return response.json()
+    })
+    .then((data) => {
+      // console.log(data)
+      $("#bird-type").autocomplete({
+        source: data,
+        delay: 200,
+        minLength: 1
+      });
+    })
     .catch((error) => {
       console.error('Error:', error);
     });
-});
-
-
-// A pre-written list of birds. We are trying to replace this with /api/birds/names
-const birdList = [ 
-  "Mourning doves",
-  "Barred owl",
-  "Ruby-throated hummingbird",
-  "Bald Eagle",
-  "Snowy Owl",
-  "Great crested flycatcher",
-  "Pileated woodpecker",
-  "Canada goose",
-  "Mallards",
-  "Mute Swan",
-  "Tree swallow",
-  "Black Duck",
-  "Yellow-bellied sapsucker",
-  "House sparrow",
-  "Sandhill cranes",
-  "Ruby-crowned kinglet",
-  "Green-winged teal",
-  "Trumpeter swans",
-  "Wood Duck",
-  "Long-eared owl",
-]
-
-// The autocomplete feature; we will replace the 'source' with the results of the API call 
-$("#bird-type").autocomplete({
-  source: birdList,
-  delay: 200,
-  minLength: 1
 });
 
 // Once you click the 'submit' button, the values in the inputs are converted into
@@ -102,7 +97,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
 
   let dataPackage = {
     bird_name: birdType,
-    user_id: 1,
+    user_id: 1, // must be session.id
     coordinates: latLongSubmit
   }
 
@@ -115,9 +110,9 @@ document.getElementById("submitButton").addEventListener("click", function () {
     body: JSON.stringify(dataPackage),
   })
     .then((response) => {
-      console.log("front-end response.json() call", response.json())
       birdType = '';
       latLongSubmit = '';
+      return response.json()
     })
     .then((data) => {
       if (data) {
@@ -128,7 +123,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
       // clear the form
       birdType = '';
       latLongSubmit = '';
-      console.log("client-side data meant to be submitted to back-end", dataPackage)
+      // console.log("client-side data meant to be submitted to back-end", dataPackage)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -137,9 +132,92 @@ document.getElementById("submitButton").addEventListener("click", function () {
 
 
 
+// for /home
+function homeBirdsMarkerGenerator() {
+  const birdDiv = document.getElementsByClassName("bird-card")
+  const birdDataIds = []
+
+  // loop to extract the data-birdid for each `bird-card` div
+  for (let i = 0 ; i < birdDiv.length; i++) {
+    let indBirdId = birdDiv[i].dataset.birdid
+    console.log(indBirdId)
+    birdDataIds.push(indBirdId)
+  }
+  console.log(birdDataIds)
+
+  // loop to run a separate API call for the data values
+  for (let j = 0 ; j < birdDataIds.length; j++) {
+    console.log("This page has loaded")
+    fetch(`/api/birds/sightings/${birdDataIds[j]}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => {
+        console.log(`finding data from ${birdDataIds[j]}`)
+        return response.json()
+      })
+      .then((data) => {
+        console.log(data)
+        let coordinates = data.coordinates
+        for (let i = 0; i < coordinates.length; i++) {
+          console.log(coordinates[i])
+          splitCoor = coordinates[i].split(", ")
+          console.log(splitCoor)
+          const x = splitCoor[0]
+          const y = splitCoor[1]
+          console.log(x)
+          console.log(y)
+
+          L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`<b>${data.bird_name}</b><br>
+          Busted at ${x}, ${y}.`);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+}
 
 
-// //hide view map link when in full page mode
-// function myFunction() {
-//   document.getElementById("viewMap").style.display = "none";
-// }
+// for /singlebird/:id
+function singleBirdMarkerGenerator(idNum) {
+  console.log(`This is the singleBirdMarkerGenerator function with id of ${idNum}`)
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("This page has loaded")
+    fetch(`/api/birds/sightings/${idNum}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => {
+        // for /api/birds/sightings", response)
+        return response.json()
+      })
+      .then((data) => {
+        console.log(data)
+        let coordinates = data.coordinates
+        for (let i = 0; i < coordinates.length; i++) {
+          console.log(coordinates[i])
+          splitCoor = coordinates[i].split(", ")
+          console.log(splitCoor)
+          const x = splitCoor[0]
+          const y = splitCoor[1]
+          console.log(x)
+          console.log(y)
+
+          L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`<b>${data.bird_name}</b><br>
+          Busted at ${x}, ${y}.`);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  })
+}
+
+
+
+    

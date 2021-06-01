@@ -66,7 +66,7 @@ router.get('/names', async (req, res) => {
         for (let i = 0; i < birdPlain.length; i++) {
             namesList.push(birdPlain[i].bird_name)
         }
-        console.log(namesList)
+        console.log("bird-routes, /names", namesList)
         res.status(200).json(namesList);
     } catch {
         res.status(500).json(err);
