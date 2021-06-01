@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   });
 });
 
-//✔️ gets 6 random
+//✔️ gets 8 random cards
 router.get("/home", async (req, res) => {
   try {
     const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 8 }).then((encounters) => {
@@ -33,7 +33,7 @@ router.get("/home", async (req, res) => {
   }
 });
 
-// ✔️ but does not present on page
+// ✔️
 router.get("/singlebird/:id", async (req, res) => {
   try {
     const birdsData = await Bird.findByPk(req.params.id);
@@ -109,6 +109,7 @@ router.get('/homeall', async (req, res) => {
       if (a.bird_name > b.bird_name) { return 1; }
       return 0;
     })
+
     res.render('birdcard', {
       layout: 'main',
       birdsArr: birdPlain,
