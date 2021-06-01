@@ -37,12 +37,14 @@ footer {
   color: rgb(3, 54, 3);
 }
 
- 
-
 
 .bType  {
  font-size: 25px;
  margin-bottom: 3%;
+}
+
+.ui-helper-hidden-accessible{
+    display:none !important;
 }
 
 footer a {
