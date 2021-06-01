@@ -48,6 +48,8 @@ router.get('/', async (req, res) => {
       }
     });
 
+
+// api/birds/
 // ✔️  returns an array of bird names from the database
 router.get('/names', async (req, res) => {
     try {

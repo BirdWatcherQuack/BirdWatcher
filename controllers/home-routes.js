@@ -8,10 +8,10 @@ router.get("/", (req, res) => {
   });
 });
 
-//✔️ gets 6 random 
+//✔️ gets 6 random
 router.get("/home", async (req, res) => {
   try {
-    const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 6 }).then((encounters) => {
+    const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 8 }).then((encounters) => {
       const birdRandomCards = []
       for (let i = 0; i < encounters.length; i++) {
         let thisBird = encounters[i].get({ plain: true })

@@ -3,12 +3,12 @@ const Bird = require('./Bird');
 const Location = require('./Location');
 
 Bird.belongsToMany(User, {
-   foreignKey: 'user_id',
+  //  foreignKey: 'user_id',
   through: Location,
 })
 
 User.belongsToMany(Bird,{
-  foreignKey: 'bird_id',
+  // foreignKey: 'bird_id',
   through: Location,
 }) 
 

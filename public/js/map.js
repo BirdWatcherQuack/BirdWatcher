@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('/api/birds/names', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((data) => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
 var myOttawaMap = L.map('mapid').setView([45.422, -75.697], 12);
 
 const mapTileUrl = `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`
@@ -30,18 +43,7 @@ function onMapClick(e) {
   // myOttawaMap.on('click', addMarker(lat, long))
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('/api/birds/names', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => console.log(response))
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-});
+
 
 
 
