@@ -14,6 +14,8 @@
 
  # General Info
 
+ Quack is a birdwatcher application that allows user to submit sighting in Ottawa area.
+
 
  # Specifics
 
