@@ -54,12 +54,12 @@ router.get("/home", async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
     });
-
-    // const user = userData.map((username) => username.get({ plain: true }));
-    const user = userData.get({ plain: true });
-
-    res.render('main', {
-      ...user,
+    console.log(userData)
+    const userArr = userData.map((user) => user.get({ plain: true }));
+    console.log(userArr)
+    res.render('username', {
+      layout: 'main',
+      userArr : userArr,
       loggedIn: true
     });
   } catch (err) {
@@ -67,12 +67,12 @@ router.get("/home", async (req, res) => {
   }
 });
 
-router.get('/home', (req, res) => {
-  const { user: { username } = {} } = req;
-  res.render('main', {
-    username,
-  });
-});
+// router.get('/home', (req, res) => {
+//   const { user: { username } = {} } = req;
+//   res.render('main', {
+//     username,
+//   });
+// });
 
 // router.get('/home', (req, res) => {
 //   User.findAll({
