@@ -28,9 +28,9 @@ function onMapClick(e) {
   function addMarker(x, y) {
 
     popup
-        .setLatLng(e.latlng)
-        .setContent(`You found this bird at ${e.latlng.toString()}. Updating your coordinates`)
-        .openOn(myOttawaMap);
+      .setLatLng(e.latlng)
+      .setContent(`You found this bird at ${e.latlng.toString()}. Updating your coordinates`)
+      .openOn(myOttawaMap);
 
     // const birdyIcon = L.icon({
     //   iconUrl: 'images/birdy.png',
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // A pre-written list of birds. We are trying to replace this with /api/birds/names
-const birdList = [ 
+const birdList = [
   "Mourning doves",
   "Barred owl",
   "Ruby-throated hummingbird",
@@ -123,7 +123,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
       if (data) {
         alert('Yay! Your bird has been submitted!');
       } else {
-        alert('Sorry, your bird has not been submitted');  
+        alert('Sorry, your bird has not been submitted');
       }
       // clear the form
       birdType = '';
