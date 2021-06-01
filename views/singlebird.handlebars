@@ -1,9 +1,14 @@
 <div class="column1">
-  <h4>{{bird_name}} (Latin name: {{latin_name}})</h4>
+  <h4 class="bName" style="margin-left: 3rem; font-size: 30px;">{{bird_name}} (Latin name: {{latin_name}})</h4>
   <figure class="card code-card">
     <img src="/images/{{bird_img}}" />
-    <figcaption>{{bird_name}} weight {{weight}}</figcaption>
+    <figcaption>{{bird_name}}</figcaption>
   </figure>
-  <p>{{bird_type}}</p>
-  <p>{{description}}</p>
+  <figure class="card code-card">
+    <p class="bType">{{bird_type}}</p>
+    <p class="bDescr">{{description}}</p>
+    <br>
+    <p>Weight: {{weight}} kg</p>
+    <p>Max age: {{max_age}}</p>
+  </figure>
 </div>
