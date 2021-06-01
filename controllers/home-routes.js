@@ -17,9 +17,10 @@ router.get("/home", async (req, res) => {
         let thisBird = encounters[i].get({ plain: true })
         birdRandomCards.push(thisBird)
       }
+      console.log('thisBird', birdRandomCards)
       res.render('birdcard', {
         layout: 'main',
-        birdsArr: birdRandomCards
+        birdsArr: birdRandomCards,
       });
     })
   } catch (err) {
@@ -31,15 +32,15 @@ router.get("/home", async (req, res) => {
 router.get("/singlebird/:id", async (req, res) => {
   try {
     const birdsData = await Bird.findByPk(req.params.id);
-    const birdsArr = birdsData.get({ plain: true });
-    console.log('birdsArr', birdsArr)
+    const singleBirdData = birdsData.get({ plain: true });
     res.render('singlebird', {
       layout: 'main',
-      birdsArr: birdsArr,
+      ...singleBirdData,
     });
+    //res.status(200).json(singleBirdData);
   } catch (err) {
     console.log(err)
-    // res.status(500).json(err);
+    //res.status(500).json(err);
   }
 });
 

@@ -1,10 +1,9 @@
 <div class="column1">
+  <h4>{{bird_name}} (Latin name: {{latin_name}})</h4>
   <figure class="card code-card">
-    <img src="/images/{{bird.bird_img}}" />
-    <h2>{{bird.bird_name}}</h2>
-    {{!-- attach all info aboy birds --}}
-    {{!-- <img src="/images/{{filename}}" alt="{{description}}"> --}}
-
+    <img src="/images/{{bird_img}}" />
+    <figcaption>{{bird_name}} weighs {{weight}}</figcaption>
   </figure>
-  <p>{{bird.description}}</p>
+  <p>{{bird_type}}</p>
+  <p>{{description}}</p>
 </div>
