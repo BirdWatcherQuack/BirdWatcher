@@ -134,16 +134,14 @@ router.get('/homeall', async (req, res) => {
 
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
-    layout: "main",
+    layout: "terms",
   });
-  //console.log('Hello')
 });
 
 router.get("/privacypolicy", (req, res) => {
   res.render("privacypolicy", {
-    layout: "main",
+    layout: "terms",
   });
-  //console.log('Hello')
 });
 
 router.get("/map", (req, res) => {
