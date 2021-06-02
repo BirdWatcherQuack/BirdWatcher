@@ -11,14 +11,11 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-
   <title>Quack</title>
   <link rel="stylesheet" type="text/css" href="/css/map.css">
   <link rel="stylesheet" type="text/css" href="/css/login.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/birdcards.css">
-  <link rel="stylesheet" type="text/css" href="/css/newbird.css">
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -26,7 +23,6 @@
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -37,12 +33,9 @@
       <div class="w3-padding w3-center">
         <img class="w3-circle" src="/images/duck_right.png" alt="avatar" style="width:75%">
       </div>
-      {{!-- we need to include username to show under pic --}}
-
       <div>
         <h4 style="margin-left: 25%; color: orange;">{{session.username}}</h4>
       </div>
-
     </div>
     <a class="w3-bar-item w3-button " href="/home" onclick="closeSidebar()">Home</a>
     <a class="w3-bar-item w3-button " href="/map" onclick="closeSidebar()">Add Sighting</a>
@@ -70,18 +63,13 @@
     </figure>
   </div>
 
-
   <footer>
     <h3>© 2021 The QUACK Production</h3>
-
     <section class="row one">
       <a href="/termsofservice" target="_blank ">Terms of Service</a>
       <a href="/privacypolicy" target="_blank">Privacy Policy</a>
-
     </section>
-
   </footer>
-
   <script src="/js/logout.js"></script>
   <script src="/js/login.js"></script>
   <script src="/js/facebook.js"></script>

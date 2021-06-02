@@ -1,10 +1,16 @@
-<div class="column">
-  <figure class="card code-card">
+<div class="column1">
+  <figure class="card code-card" style="box-shadow: 0 20px 40px rgb(3, 54, 3);">
+    <h2 class="title" style="color: rgb(3, 54, 3); align-self:center;">Add Sighting</h2>
     <label class="labelText" for="bird-type">Type of Bird</label>
-    <input class="input is-warning" type="text" id="bird-type">
+    <div class="input-field"
+      style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff">
+      <input id="bird-type" type="text" />
+    </div>
     <label class="labelText" for="lat-long-input">GPS Coordinates (Latitude and Longitude)</label>
-    <input class="input is-warning" type="text" id="lat-long-input">
-    <button style="margin-left: 44%" type="submit" id="submitButton" class="btn">Submit Bird Sighting for
-      Review</button>
+    <div class="input-field"
+      style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff">
+      <input id="lat-long-input" type="text" />
+    </div>
+    <button style="margin-left: 42%" type="submit" id="submitButton" class="btn">Submit</button>
   </figure>
 </div>
