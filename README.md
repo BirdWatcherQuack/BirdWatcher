@@ -80,9 +80,17 @@
 
    ![Sighting](./public/images/submit.png)
 
-   Form to submit new bird
+
+
+ Markers on the map
+ 
+   ![Markers](./public/images/markers.png)
+
+ Form to submit new bird
 
    ![New bird]()
+
+
 
 
 
