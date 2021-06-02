@@ -63,6 +63,33 @@
 
    ![Login page](./public/images/login.png)
 
+  Side bar that displays username of logeded in user
+
+   ![Side bar](./public/images/sidebar.png)
+
+  Home page with location markers based on the displayed birds
+
+   ![Home page](./public/images/homepage.png)
+
+
+  Single bird descroption
+
+  ![Singlr bird](./public/images/singlebird.png)
+
+  Form to submit sighting for a bird
+
+   ![Sighting](./public/images/submit.png)
+
+   Form to submit new bird
+
+   ![New bird]()
+
+
+
+
+
+
+
 
  # Comments
 
