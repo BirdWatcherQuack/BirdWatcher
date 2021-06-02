@@ -2,11 +2,11 @@ const router = require('express').Router();
 const { Bird, Location, User } = require('../../models');
 
 // might work in server.js / router
-const express = require('express');
-const { response } = require('express');
-const app = express()
+// const express = require('express');
+// const { response } = require('express');
+// const app = express()
 
-app.use(express.json({ limit: '1mb'}))
+// app.use(express.json({ limit: '1mb'}))
 
 // for api/birds/
 
@@ -64,7 +64,7 @@ router.get('/names', async (req, res) => {
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
         const namesList = []
         for (let i = 0; i < birdPlain.length; i++) {
-            namesList.push(birdPlain[i].bird_name)
+            namesList.push([birdPlain[i].bird_name, birdPlain[i].id])
         }
         console.log("bird-routes, /names", namesList)
         res.status(200).json(namesList);
