@@ -111,7 +111,7 @@ router.get('/homeall', async (req, res) => {
       return 0;
     })
 
-    res.render('birdcard', {
+    res.render('allbirds', {
       layout: 'main',
       birdsArr: birdPlain,
 
