@@ -68,12 +68,12 @@ router.get("/home", async (req, res) => {
   }
 });
 
-// router.get('/home', (req, res) => {
-//   const { user: { username } = {} } = req;
-//   res.render('main', {
-//     username,
-//   });
-// });
+router.get('/home', (req, res) => {
+  const { user: { username } = {} } = req;
+  res.render('main', {
+    username,
+  });
+});
 
 // router.get('/home', (req, res) => {
 //   User.findAll({

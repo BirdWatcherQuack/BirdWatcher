@@ -3,9 +3,9 @@
   align-items: center; 
   width: 100vw;
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  justify-content: space-between;
 }
 
 .bird-container .bird-card {
