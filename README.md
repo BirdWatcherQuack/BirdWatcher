@@ -74,7 +74,7 @@
 
   Single bird descroption
 
-  ![Singlr bird](./public/images/singlebird.png)
+  ![Single bird](./public/images/singlebird.png)
 
   Form to submit sighting for a bird
 
