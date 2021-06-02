@@ -132,6 +132,12 @@ router.get('/homeall', async (req, res) => {
 
 });
 
+router.get("/newbird", (req, res) => {
+  res.render("newbird", {
+    layout: "main",
+  });
+});
+
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
     layout: "terms",
