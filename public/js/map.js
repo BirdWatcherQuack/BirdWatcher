@@ -208,7 +208,7 @@ function homeBirdsMarkerGenerator() {
           // console.log(y)
 
           L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`<b>${data.bird_name}</b><br>
-          Busted at ${x}, ${y}.`);
+          Caught in the act at ${x}, ${y}.`);
         }
       })
       .catch((error) => {
@@ -246,7 +246,7 @@ function singleBirdMarkerGenerator(idNum) {
           console.log(y)
 
           L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`<b>${data.bird_name}</b><br>
-          Busted at ${x}, ${y}.`);
+          Caught in the act at ${x}, ${y}.`);
         }
       })
       .catch((error) => {
