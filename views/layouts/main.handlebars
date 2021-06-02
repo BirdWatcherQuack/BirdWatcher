@@ -39,7 +39,7 @@
       {{!-- we need to include username to show under pic --}}
 
       <div>
-        <h4>username: {{username}}</h4>
+        <h4 style="margin-left: 25%; color: orange;">{{session.username}}</h4>
       </div>
 
     </div>
@@ -60,7 +60,7 @@
 
   </div>
 
-  <div class="column1">
+  <div class="column1" id="mapMain">
     <figure class="card code-card">
       <a id="viewMap" class="view-map" href="/map">View Map</a>
       <div id="mapid" style="height: 500px; width: auto;"></div>
@@ -73,7 +73,7 @@
 
     <section class="row one">
       <a id="hiding" href="/termsofservice" target="_blank ">Terms of Service</a>
-      <a href="/privacypolicy" target="_blank">Privacy Policy</a>
+      <a id="hiding" href="/privacypolicy" target="_blank">Privacy Policy</a>
     </section>
 
   </footer>

@@ -26,6 +26,7 @@ router.get("/home", async (req, res) => {
       res.render('birdcard', {
         layout: 'main',
         birdsArr: birdRandomCards,
+        user_id: req.session.username,
       });
     })
   } catch (err) {
@@ -59,7 +60,7 @@ router.get("/home", async (req, res) => {
     console.log(userArr)
     res.render('username', {
       layout: 'main',
-      userArr : userArr,
+      userArr: userArr,
       loggedIn: true
     });
   } catch (err) {
