@@ -1,33 +1,46 @@
-<div class="column">
-  <figure class="card code-card">
-    <form action="#" class="sign-up-form">
-      <h2 class="title">Add a new Species</h2>
-      <div class="input-field">
-        <i class="fas fa-user"></i>
-        <input id="bird_type" type="text" placeholder="Bird Family (ie. Owls, Woodpekers, etc.)" />
-      </div>
-      <div class="input-field">
-        <i class="fas fa-envelope"></i>
-        <input id="bird_name" type="text" placeholder="Full Name" />
-      </div>
-      <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input id="latin_name" type="text" placeholder="Latin Name" />
-      </div>
+<div class="column1">
+  <figure class="card code-card" style="box-shadow: 0 10px 20px rgb(3, 54, 3);">
+    <form action="#" class="signup-form">
+      <h2 class="title" style="color: rgb(3, 54, 3)">Add a New Bird</h2>
+      <p>Welcome to Quack's bird profile generator! If our databases don't have the type of bird you've sighted, you can
+        fill our forms and submit it. After hitting the 'Submit' button, you will be automatically redirected to the
+        'Bird Sighting' page to submit your sighting.</p>
+      <br>
+      <div>
+        <ul>The following are some instructions for correctly submitting information about your bird:</ul>
+        <li><b>Bird Type:</b> What category of bird is this? Owl? Hawk? Robin? </li>
+        <li><b>Bird Name:</b> What is this bird's name? Emerald Toucanet? Red Parrot?</li>
+        <li><b>Latin Name:</b> What is this bird's technical latin-based name? Anas clypeata? Buteo lagopus?</li>
+        <li><b>Bird Name:</b> What is this bird's name? Emerald Toucanet? Red Parrot?</li>
+        <li><b>Max Age:</b> What is the oldest possible age this bird can get (in years?)</li>
+        <li style="margin-bottom: 5%"><b>Average Weight:</b> How much does the average bird of this species weight (in
+          kilograms)?</li>
 
-      <div class="inputfield">
-        <i class="fas fa-envelope"></i>
-        <input id="max_age" type="number" placeholder="Max Age" />
-      </div>
-      <div class="inputfield">
-        <i class="fas fa-envelope"></i>
-        <input id="max_age" type="number" placeholder="Average Weight" />
-      </div>
-      <div class="inputfield">
-        <i class="fas fa-envelope"></i>
-        <input id="max_age" type="number" placeholder="Description" />
-      </div>
-      <input type="submit" class="btn" value="Submit" />
+        <div class="input-field"
+          style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <input id="bird_type" type="text" placeholder="Bird Family (ie. Owls, Woodpekers, etc.)" />
+        </div>
+        <div class="input-field"
+          style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <input id="bird_name" type="text" placeholder="Full Name" />
+        </div>
+        <div class="input-field"
+          style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <input id="latin_name" type="text" placeholder="Latin Name" />
+        </div>
+        <div class="input-field"
+          style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <input id="max_age" type="number" placeholder="Max Age" />
+        </div>
+        <div class="input-field"
+          style="max-width:none; grid-template-columns: none; border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <input id="av_weight" type="number" placeholder="Average Weight" />
+        </div>
+        <div style="border: #ffdd57 solid 2px; background-color: #fff; box-shadow: 0 10px 20px rgb(3, 54, 3);">
+          <textarea id="description" type="text" placeholder="Description"></textarea>
+        </div>
+        <input id="create" type="submit" class="btn" value="Submit"
+          style="box-shadow: 0 10px 30px rgb(3, 54, 3); margin-bottom: 6%;" />
     </form>
   </figure>
 </div>

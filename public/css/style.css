@@ -28,7 +28,16 @@ a {
     margin-top: 8px;
 }
 
-.barColor,
+.headerName {
+    cursor: pointer; 
+    font-size: 50px;
+   
+}
+.quack {
+color: #f0b26b;
+}
+
+.barColor, 
 .bName h4,
 h3,
 h1,
