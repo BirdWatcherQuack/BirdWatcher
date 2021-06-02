@@ -53,5 +53,8 @@ footer a, footer h3 {
     margin-left: 3%;
 }
 
+.ui-helper-hidden-accessible{
+    display:none !important;
+}
 
   
