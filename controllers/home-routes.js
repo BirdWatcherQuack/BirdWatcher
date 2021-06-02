@@ -26,6 +26,7 @@ router.get("/home", async (req, res) => {
       res.render('birdcard', {
         layout: 'main',
         birdsArr: birdRandomCards,
+        user_id: req.session.username,
       });
     })
   } catch (err) {
@@ -54,12 +55,12 @@ router.get("/home", async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
     });
-
-    // const user = userData.map((username) => username.get({ plain: true }));
-    const user = userData.get({ plain: true });
-
-    res.render('main', {
-      ...user,
+    console.log(userData)
+    const userArr = userData.map((user) => user.get({ plain: true }));
+    console.log(userArr)
+    res.render('username', {
+      layout: 'main',
+      userArr: userArr,
       loggedIn: true
     });
   } catch (err) {
