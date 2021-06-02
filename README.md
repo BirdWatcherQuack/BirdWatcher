@@ -1,114 +1,106 @@
-# Birdwatcher
-
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# Birdwatcher (Quack) Application
 
 ## Table of contents
- * [General info](#General-Info)
- * [Specifics](#Specifics)
+ * [Overview](#Overview)
+ * [Features](#Features)
  * [Deployment of application](#Deployment-of-application)
  * [Application Code](#Application-Code)
  * [Screenshots](#Screenshots)
- * [Comments](#Comments)
+ * [Future Developments](#Future-Developments)
+ * [License](#License)
+ * [Creators and Collaborators](#Creators-and-Collaborators)
 
 
-# General Info
 
- Quack is a birdwatcher application that allows user to submit sighting in Ottawa area.
+# Overview
+ Quack is a birdwatcher application which allows for users to view bird sightings (submitted by others) in an interactive map. Users can submit their own bird sightings; they can also learn more about individual birds by clicking on its respective cards.
 
+ This application is centered around the Ottawa area, though users can still technically submit bird sightings from anywhere. 
 
-# Specifics
+# Features
 
-  * Entering website:
-     * in order to enter Quack website and view any information user has to sign up or log in if already has username and password. 
-     * after successfully providing information, user will be redirected to homepage.
+  * Entering the application:
+     * To enter the Quack website and view its contents, prospective users must either sign up or log in. Quack will confirm if the username and password match its database. 
+     * A successful login redirects the user to the homepage.
 
   * Homepage:
-     * user will be presented with randomly selected cards containing image of the bird that you can find in Ottawa area.
-     * when the user focuses on the card with the mouse, it shows the bird name associated with the image.
-     * there is an option to view more details about every single bird
-     * user also can click “View All Birds” in order to see the complete list of the birds
+     * The user is presented random HTML `cards` containing images of birds commonly found in the Ottawa area.
+     * Hovering over the card with the mouse displays the name of the bird associated with the image, as well as a `Learn More` feature allowing you to view more details about the bird in question. This feature applies to all bird cards.
+     * At the bottom of the random selection of birds, there is `View All Birds` link to see the complete list of birds, arranged alphabetically. This option is also available in the navigation bar.
      * by clicking on navigation bar, user can choose which page he/she/they would like to view at the moment.
-     * homepage includes a map, where the user can view location of the registered birds based on the birds’ cards presenting on the homepage at the moment.
+     * The homepage includes a map containing existing markers. These markers represent bird sightings of the birds from the (above) cards in the homepage. Since the above cards are selected randomly from the database, these markers (and the birds they represent) will naturally be different every time the homepage loads!
 
   * Add Sighting
-     * in order to add sighting user should click on “View Map” on the map, or click “Add Sighting” in navigation bar
-     * two inputs let user to choose bird from the list and put marker on by clicking on the map
-     * after user can press “Submit Bird Sighting For” button to add location for the bird 
+     * To add a bird sighting, the user clicks on the `View Map` link - found close to the map - or by clicking the `Add Sighting` in navigation bar.
+     * The `/map` route brings you to a large map with two inputs above it. From there, our user chooses two things:
+      - The bird you saw; this is an autocomplete list, coming directly from the database, and
+      - The map coordinates (where you saw the bird); clicking on the map populates this input with its respective coordinates.
+     * You can submit your bird by pressing the after user can press `Submit Bird Sighting For` button to submit your sighting to the database.
+     * After submitting, the application redirects you to a `/singlebird:id` page which corresponds to the id of the bird you've submitted. (You don't have to worry about this; our code handles that!)
+  
+  * View Individual Birds
+    * By clicking for more information of a bird, or by submitting a bird, you are brought to a `/singlebird` route, which presents you more specific information about your bird of choice, including its technical name, its top age and weight, and a detailed description.
 
-
-  At any time, user can log out from the page by clicking “Logout” on navigation bar. The session will be over and the user will be redirected to sign in/sign up page. Application has “Terms of Service”, and “Privacy Policy” for security purposes.
-
-
-
+  * Logging Out
+    * At any time, user can log out from the page by clicking “Logout” on the navigation bar. The session terminates and the user is redirected to the sign in/sign up page. Our application also contains `Terms of Service`, and a `Privacy Policy` for security purposes.
 
  # Deployment of application
 
-   To run a project, please follow the link 
-
-   [Heroku](https://birdwatcherquack.herokuapp.com/)
-
-
+   To run the application, [click this link to be taken to the Heroku app.](https://birdwatcherquack.herokuapp.com/)
 
  # Application Code
 
-   To view application code, please follow the link 
-
-   [GitHub](https://github.com/BirdWatcherQuack/BirdWatcher)
+   To view application code, [click this link to be taken to the Git repository.](https://github.com/BirdWatcherQuack/BirdWatcher)
 
 
  # Screenshots
+ ### Login/Sign up page
+<img src="./public/images/login.png" alt="Login page" width = "500"/>
 
-  Login/Sign up page
+  ### Side bar that displays username of logged-in user
+<img src="./public/images/sidebar.png" alt="Side bar" width = "150"/>
 
-   ![Login page](./public/images/login.png)
+  ### Home page with location markers (based on birds in above cards)
+<img src="./public/images/homepage.png" alt="Home page" width = "500"/>
 
-  Side bar that displays username of logeded in user
+  ### Single bird description
+<img src="./public/images/singlebird.png" alt="Single bird" width = "500"/>
 
-   ![Side bar](./public/images/sidebar.png)
+  ### Form to submit a sighting for a bird
+<img src="./public/images/submit.png" alt="Sighting page" width = "500"/>
 
-  Home page with location markers based on the displayed birds
+ ### Markers on the map
+<img src="./public/images/markers.png" alt="Markers" width = "500"/>
 
-   ![Home page](./public/images/homepage.png)
-
-
-  Single bird descroption
-
-  ![Single bird](./public/images/singlebird.png)
-
-  Form to submit sighting for a bird
-
-   ![Sighting](./public/images/submit.png)
-
-
-
- Markers on the map
- 
-   ![Markers](./public/images/markers.png)
-
- Form to submit new bird
-
+ ### Form to submit new bird
    ![New bird]()
 
 
+ # Future Developments
 
+The Quack application has a number of features, allowing you to add and view birds and bird sightings. Here are a few ways we can improve our applications going forward.
 
+ * As it stands, the user can sign up using Facebook account. However, we should include a log out process, especially to comply with Facebook logout requirements. 
 
+ * The login/signup page contains icons which allow a user to register through Twitter, Google, or LinkedIn. They currently do not work, but we can later link Quack with these social media accounts in the future, among others.
 
+ * Since the user provides some personal information, we plan to stricten our requirements for password encryption as part of our improved security measures.
 
+ * Furthermre, we would like to create user-specific account information, in which they may view birds they have added, as well as the option to create a “new" bird profile, including its age, weight, description, and to submit their personal photos of the bird they saw. This would require a performant server, as large numbers of images would otherwise slow down the operation of our website.
 
-
-
- # Comments
-
- * User can sign up using Facebook account, however, log out process should be included, specific for Facebook logout requirements. 
-
- * The login/signup page has icons to sign up with Twitter, Google, and LinkedIn. They don’t work but social media accounts can be linked in the future, as well as different options of social media types can be added.
-
- * Since user should provide some personal information, we are planning to make the requirements for password stricter, for better security purposes.
-
- * Also, we would like to create account information for users, where after entering the website, they can view what birds they added, and the option to create “new bird”. User will be able to different names that are not in the list, as well as add personal image. We would be using different server, since big number of images will slow down operation of our website.
-
- * In order to prevent overflow of markers, we will set up restrictions (ex.: one bird per 30sec). Moreover, we would like to be able to approve submitting before it appears for the rest of users to view, to limit falsie information (ex. saves as commented out data)
+ * To prevent a user from overflowing the map with markers (in bad faith), we plan on setting up restrictions (e.g., one bird sighting submission per 30 seconds). Moreover, we would create an approval process, for administrators to review and approve the bird sighting/profile before it appears on the website for all to view. These measures would limit false information.
 
  Many extra features can be added to make Quack website more interactive.
+
+## License
+This project is licensed under:
+
+### MIT License ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Creators and Collaborators
+
+* Fabio Miguel Amorim Rodrigues 
+* Nwakaego Gift Eze
+* Ahmed Hakeem
+* Anastasia Sorkin
+* Daniel Pisani
