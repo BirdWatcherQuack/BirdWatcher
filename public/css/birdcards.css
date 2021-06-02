@@ -3,9 +3,10 @@
   align-items: center; 
   width: 100vw;
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
 }
 
 .bird-container .bird-card {
@@ -154,6 +155,8 @@ i {
 
 .allBirds {
   flex: 0 0 100%;
+  margin-left: 45%;
+  margin-bottom: 5%;
   
 }
 
