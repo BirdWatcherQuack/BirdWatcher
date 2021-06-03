@@ -15,6 +15,9 @@ router.get("/", (req, res) => {
 
 //✔️ gets 8 random cards
 router.get("/home", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   try {
     const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 8 }).then((encounters) => {
       const birdRandomCards = []
@@ -36,6 +39,9 @@ router.get("/home", async (req, res) => {
 
 // ✔️
 router.get("/singlebird/:id", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   try {
     const birdsData = await Bird.findByPk(req.params.id);
     const singleBirdData = birdsData.get({ plain: true });
@@ -51,6 +57,9 @@ router.get("/singlebird/:id", async (req, res) => {
 });
 
 router.get("/home", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
@@ -69,6 +78,9 @@ router.get("/home", async (req, res) => {
 });
 
 router.get('/home', (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   const { user: { username } = {} } = req;
   res.render('main', {
     username,
@@ -101,6 +113,9 @@ router.get('/home', (req, res) => {
 // });
 
 router.get('/homeall', async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   try {
     const dbBirdData = await Bird.findAll({});
     const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
@@ -133,6 +148,9 @@ router.get('/homeall', async (req, res) => {
 });
 
 router.get("/newbird", (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   res.render("newbird", {
     layout: "main",
   });
@@ -151,6 +169,9 @@ router.get("/privacypolicy", (req, res) => {
 });
 
 router.get("/map", (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  } 
   res.render("map", {
     layout: "main",
   });

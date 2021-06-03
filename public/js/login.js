@@ -25,14 +25,17 @@ const loginFormHandler = async (event) => {
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
-    });
-    console.log(response.json())
-
+    })
+    .then((response) => {
+    return response.json()
+      })
+ 
     if (response.ok) {
       console.log(response)
       document.location.replace('/home');
     } else {
-      alert('Failed to log in.');
+      // response.message represents the issue upon failed log-in attempt
+      alert(response.message);
       console.log(response)
     }
   }

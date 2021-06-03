@@ -5,6 +5,9 @@ const { Bird, Location, User } = require('../../models');
 // for api/cards route
 
 router.get('/', async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/")
+  }
   try {
         const dbBirdData = await Bird.findAll();
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
@@ -27,6 +30,9 @@ router.get('/', async (req, res) => {
 
   // ✔️ is expressed in /home
 router.get('/random', async (req, res) => {
+    if (!req.session.user_id) {
+      res.redirect("/")
+    }
       // const dbBirdData = await Bird.findAll();
       const dbBirdData = await Bird.findAll({ order: Sequelize.literal('rand()'), limit: 5 }).then((encounters) => {
         const birdRandomCards = []

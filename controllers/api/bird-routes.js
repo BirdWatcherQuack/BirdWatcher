@@ -12,6 +12,9 @@ const { Bird, Location, User } = require('../../models');
 
 // ✔️ gets all birds
 router.get('/', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
     try {
       const dbBirdData = await Bird.findAll();
 
@@ -25,6 +28,9 @@ router.get('/', async (req, res) => {
 
   // ✔️ gets a bird's sightings based on its id
   router.get('/sightings/:id', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
     try {
           const dbBirdData = await Bird.findByPk(req.params.id);
           const birdSimple = dbBirdData.get({ plain: true })
@@ -59,6 +65,9 @@ router.get('/', async (req, res) => {
 // api/birds/
 // ✔️  returns an array of bird names from the database
 router.get('/names', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
     try {
         const dbBirdData = await Bird.findAll();
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
@@ -75,6 +84,9 @@ router.get('/names', async (req, res) => {
 
 // ✔️ gets the bird by its ID
 router.get('/:id', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
 try {
     const dbBirdData = await Bird.findByPk(req.params.id);
 
@@ -91,6 +103,9 @@ try {
 
 // ✔️ Creates a new bird
 router.post('/', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
     try { 
       const birdData = await Bird.create({
         bird_type: req.body.bird_type,
@@ -110,8 +125,13 @@ router.post('/', async (req, res) => {
   // api/birds/sightings
 
   router.post('/sightings', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
     try { 
-        // if (!req.session.user_id) throw err  // KEEP THIS
+        if (!req.session.user_id) {
+            res.redirect("/")
+        }  // KEEP THIS
 
         console.log("req.body", req.body)
         
@@ -124,21 +144,23 @@ router.post('/', async (req, res) => {
            return bird.bird_name === req.body.bird_name
         })
 
-        console.log("req.session", req.session, birdPlain)
+        console.log("req.session.id", req.session.user_id, birdPlain)
 
         // Creates an object which is partially based on the above filter's bird's id
         const locationData = await Location.create({
             bird_id: birdPlain[0].id,
             coordinates: req.body.coordinates,
-            user_id: req.body.user_id // => The actual variable => req.session.user_id
+            user_id: req.session.user_id //req.body.user_id // => The actual variable => req.session.user_id
         });
 
         // Should return this data as the response
         let dataDump = {
             bird_id: birdPlain[0].id,
             coordinates: req.body.coordinates,
-            user_id: req.body.user_id //change to 'req.session.user_id' when POST method works
+            user_id: req.session.user_id // req.body.user_id //change to 'req.session.user_id' when POST method works
         }
+
+        console.log("datadump:",dataDump)
       res.status(200).json(dataDump);
     } catch (err) {
       res.status(400).json(err);
@@ -147,6 +169,9 @@ router.post('/', async (req, res) => {
 
 // ✔️ makes the entire bird species in question extinct
 router.delete('/:id', async (req, res) => {
+    if (!req.session.user_id) {
+        res.redirect("/")
+    }
 try {
     const birdData = await Bird.destroy({
     where: 

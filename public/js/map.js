@@ -104,7 +104,6 @@ document.getElementById("submitButton").addEventListener("click", function () {
 
   let dataPackage = {
     bird_name: birdType,
-    user_id: 1, // must be session.id
     coordinates: latLongSubmit
   }
 
