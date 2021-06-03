@@ -56,10 +56,10 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    if (await bcrypt.compare(req.body.password, user.password)) {
-      res.send('Success')
+    // if (await bcrypt.compare(req.body.password, user.password)) {
+    //   res.send('Success')
 
-    }
+    // }
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
 
     req.session.save(() => {
