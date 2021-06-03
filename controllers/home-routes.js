@@ -156,6 +156,12 @@ router.get("/newbird", (req, res) => {
   });
 });
 
+router.get('/forgot', (req, res) => {
+  res.render('forgotpassword', {
+    layout: 'forgot',
+  });
+})
+
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
     layout: "terms",

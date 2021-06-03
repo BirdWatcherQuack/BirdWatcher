@@ -5,13 +5,14 @@
         <h2 class="title">Sign in</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input id="username-login" type="text" placeholder="Username" />
+          <input id="username-login" type="text" placeholder="Username" required />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
           <input id="password-login" type="password" placeholder="Password" />
         </div>
         <input type="submit" value="Login" class="btn solid" />
+        <a href="/forgot">Forgot Password?</a>
         <p class="social-text">Or Sign in with social platforms</p>
         <div class="social-media">
           <a onclick="logIn()" class="social-icon">
@@ -28,19 +29,20 @@
           </a>
         </div>
       </form>
-      <form action="#" class="sign-up-form">
+      <form action="#" class="sign-up-form" id="form">
         <h2 class="title">Sign up</h2>
+        <h4 id="error"></h4>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input id="username-signup" type="text" placeholder="Username" />
+          <input class="name" id="username-signup" type="text" required placeholder="Username" />
         </div>
         <div class="input-field">
           <i class="fas fa-envelope"></i>
-          <input id="email-signup" type="email" placeholder="Email" />
+          <input class="email" id="email-signup" type="email" placeholder="Email" required />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input id="password-signup" type="password" placeholder="Password" />
+          <input class="password" id="password-signup" type="password" placeholder="Password" required />
         </div>
         <input type="submit" class="btn" value="Sign up" />
         <p class="social-text">Or Sign up with social platforms</p>
