@@ -27,9 +27,6 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     })
-      .then((response) => {
-        return response.json()
-      })
 
     if (response.ok) {
       console.log(response)
