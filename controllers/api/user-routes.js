@@ -40,6 +40,8 @@ router.post('/login', async (req, res) => {
       },
     });
 
+    console.log(dbUserData)
+
     if (!dbUserData) {
       res
         .status(400)

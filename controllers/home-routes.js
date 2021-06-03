@@ -49,10 +49,10 @@ router.get("/singlebird/:id", async (req, res) => {
       layout: 'main',
       ...singleBirdData,
     });
-    //res.status(200).json(singleBirdData);
+    res.status(200).json(singleBirdData);
   } catch (err) {
     console.log(err)
-    //res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 
