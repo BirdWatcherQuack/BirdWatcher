@@ -58,7 +58,6 @@ router.post('/login', async (req, res) => {
         .json({ id: dbUserData.id, user: dbUserData, message: 'You are now logged in!' });
     });
 
-
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
