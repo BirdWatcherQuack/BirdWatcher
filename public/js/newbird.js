@@ -1,5 +1,3 @@
-console.log("Hello there.")
-
 const newBirdType = document.getElementById("bird_type")
 const newBirdName = document.getElementById("bird_name")
 const newLatinName = document.getElementById("latin_name")
@@ -9,8 +7,8 @@ const newDescription = document.getElementById("description")
 const newCreate = document.getElementById("create")
 
 newCreate.addEventListener("click", function(event) {
+    
     event.preventDefault();
-
     const nbt = newBirdType.value
     const nbn = newBirdName.value
     const nln = newLatinName.value
@@ -37,11 +35,9 @@ newCreate.addEventListener("click", function(event) {
         },
       })
         .then((response) => {
-          // console.log("back-end route for /api/birds/names", response)
           return response.json()
         })
         .then((data) => {
-          // console.log(data)
           let birdNameArray = []
           for (let i = 0 ; i < data.length; i++) {
             let birdName = data[i][0];
@@ -51,7 +47,7 @@ newCreate.addEventListener("click", function(event) {
             }
           }
           
-          console.log(birdNameArray)
+        //   console.log(birdNameArray)
           newBirdPostMethod()
     
         })
@@ -85,7 +81,7 @@ newCreate.addEventListener("click", function(event) {
                 alert('Yay! Your bird has been submitted!');
             } else {
                 alert('Sorry, your bird has not been submitted');
-            }
+                }
             })
             .catch((error) => {
                 console.error('Error:', error);
