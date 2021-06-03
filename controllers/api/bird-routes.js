@@ -65,9 +65,9 @@ router.get('/', async (req, res) => {
 // api/birds/
 // ✔️  returns an array of bird names from the database
 router.get('/names', async (req, res) => {
-    if (!req.session.user_id) {
-        res.redirect("/")
-    }
+    // if (!req.session.user_id) {
+    //     res.redirect("/")
+    // }
     try {
         const dbBirdData = await Bird.findAll();
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
@@ -169,10 +169,10 @@ router.post('/', async (req, res) => {
 
 // ✔️ makes the entire bird species in question extinct
 router.delete('/:id', async (req, res) => {
-    if (!req.session.user_id) {
-        res.redirect("/")
-    }
-try {
+    // if (!req.session.user_id) {
+    //     res.redirect("/")
+    // }
+// try {
     const birdData = await Bird.destroy({
     where: 
         {
@@ -186,9 +186,9 @@ try {
     }
 
     res.status(200).json(categoryData);
-} catch (err) {
-    res.status(500).json(err);
-}
+// } catch (err) {
+//     res.status(500).json(err);
+// }
 });
 
 module.exports = router;

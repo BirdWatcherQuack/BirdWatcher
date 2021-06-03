@@ -148,9 +148,9 @@ router.get('/homeall', async (req, res) => {
 });
 
 router.get("/newbird", (req, res) => {
-  if (!req.session.user_id) {
-    res.redirect("/")
-  }
+  // if (!req.session.user_id) {
+  //   res.redirect("/")
+  // }
   res.render("newbird", {
     layout: "main",
   });
