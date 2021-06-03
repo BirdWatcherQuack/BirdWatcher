@@ -66,4 +66,19 @@ footer a, footer h3 {
     display:none !important;
 }
 
+textarea {
+    resize: none;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    
+  
+}
+
+
+
+#description {
+    padding: 20px;
+}
+
   
