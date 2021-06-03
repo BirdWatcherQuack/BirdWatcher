@@ -33,7 +33,7 @@
         "max_age": "70",
         "weight": "9",
         "description": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle (Haliaeetus albicilla). Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting.",
-        "bird_img": "baldEagle2.webp"
+        "bird_img": "BaldEagle2.webp"
     },
     {
         "bird_type": "Owl",
@@ -42,7 +42,7 @@
         "max_age": "28",
         "weight": "2",
         "description": "The snowy owl (Bubo scandiacus), also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls. One of the largest species of owl, it is the only owl with largely white plumage. Males tend to be a purer white overall while females tend to more have more extensive flecks of dark brown.",
-        "bird_img": "SnowyOwl2.jpg"
+        "bird_img": "snowyOwl2.jpg"
     },
     {
         "bird_type": "Flycatchers",
@@ -105,7 +105,7 @@
         "max_age": "26",
         "weight": "2",
         "description": "The American black duck (Anas rubripes) is a large dabbling duck in the family Anatidae. It was described by William Brewster in 1902. It is the heaviest species in the genus Anas, weighing 720–1,640 g (1.59–3.62 lb) on average and measuring 54–59 cm (21–23 in) in length with a 88–95 cm (35–37 in) wingspan. It somewhat resembles the female mallard in coloration, but has a darker plumage. The male and female are generally similar in appearance, but the male's bill is yellow while the female's is dull green with dark marks on the upper mandible. It is native to eastern North America. During the breeding season, it is usually found in coastal and freshwater wetlands from Saskatchewan to the Atlantic in Canada and the Great Lakes and the Adirondacks in the United States. It is a partially migratory species, mostly wintering in the east-central United States, especially in coastal areas.",
-        "bird_img": "BlackDuck2.jpeg"
+        "bird_img": "blackDuck2.jpeg"
     },
     {
         "bird_type": "Woodpeckers",
@@ -168,7 +168,7 @@
         "max_age": "70",
         "weight": "4.50",
         "description": "he wood duck is a medium-sized perching duck. A typical adult is from 47 to 54 cm (19 to 21 in) ( or 1.5 feet max.) In length with a wingspan of between 66 to 73 cm (26 to 29 in). The wood duck's weight ranges from 454-862 g (16.0-30.4 oz).[4]This is about three-quarters of the length of an adult mallard. It shares its genus with the Asian Mandarin duck (Aix galericulata).",
-        "bird_img": "WoodDuck2.jpeg"
+        "bird_img": "woodDuck2.jpeg"
     },
     {
         "bird_type": "Owl",
