@@ -80,7 +80,10 @@
 <img src="./public/images/markers.png" alt="Markers" width = "500"/>
 
  ### Form to submit new bird
-   ![New bird]()
+   <img src="./public/images/newbird.png" alt="Add new bird form" width = "500"/>
+
+### Delete bird (only available for developers)
+<img src="./public/images/delete.png" alt="Form to delete a bird" width = "500"/>
 
 
  # Future Developments
