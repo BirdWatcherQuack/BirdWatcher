@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const { Bird, Location, User } = require('../../models');
 
-// for api/birds/
-
 // ✔️ gets all birds and all its database columns
+// for api/birds/
 router.get('/', async (req, res) => {
     // If there is no session user id, redirects to the login page and blocks access
     if (!req.session.user_id) {
@@ -20,8 +19,8 @@ router.get('/', async (req, res) => {
     }
   });
 
-
 // ✔️ gets a bird's sightings based on its id
+// api/birds/sightings/:id
 router.get('/sightings/:id', async (req, res) => {
 if (!req.session.user_id) {
     res.redirect("/")
@@ -44,7 +43,7 @@ try {
         }
 
     // Loops through all bird sighting locations and pushes to a sightings array 
-    //  
+    // if the Bird's id matches bird_id on any of the locations
         const birdCoordinates = []
         for (let i = 0; i < sightingsPlain.length; i++) {
             if (birdSimple.id === sightingsPlain[i].bird_id) {
@@ -52,8 +51,6 @@ try {
             } 
         }
         birdShipData.coordinates = birdCoordinates
-        console.log(birdCoordinates)
-        console.log(birdShipData)
 
         res.status(200).json(birdShipData);
     } catch (err) {
@@ -62,33 +59,37 @@ try {
     }
 });
 
-
-// api/birds/
-// ✔️  returns an array of bird names from the database
+// ✔️  returns an array of bird names and matching ids
+// api/birds/names
 router.get('/names', async (req, res) => {
     if (!req.session.user_id) {
         res.redirect("/")
     }
+    // Finds all birds from database and serializes
     try {
         const dbBirdData = await Bird.findAll();
         const birdPlain = dbBirdData.map((bird) => bird.get({ plain: true }))
         const namesList = []
+        
+        // pushes the Bird's [name, id] to an array
         for (let i = 0; i < birdPlain.length; i++) {
             namesList.push([birdPlain[i].bird_name, birdPlain[i].id])
         }
-        console.log("bird-routes, /names", namesList)
+
         res.status(200).json(namesList);
     } catch {
         res.status(500).json(err);
     }
 });
 
-// ✔️ gets the bird by its ID
+// ✔️ Gets the Bird by its ID
 router.get('/:id', async (req, res) => {
     if (!req.session.user_id) {
         res.redirect("/")
     }
+
 try {
+    // Finds a Bird by 
     const dbBirdData = await Bird.findByPk(req.params.id);
 
     if (!dbBirdData) {
@@ -108,6 +109,8 @@ router.post('/', async (req, res) => {
         res.redirect("/")
     }
     try { 
+
+    // A POST-compatible bird data structure 
       const birdData = await Bird.create({
         bird_type: req.body.bird_type,
         bird_name: req.body.bird_name,
@@ -123,8 +126,8 @@ router.post('/', async (req, res) => {
   });
 
 
-  // api/birds/sightings
-  router.post('/sightings', async (req, res) => {
+// api/birds/sightings
+router.post('/sightings', async (req, res) => {
     if (!req.session.user_id) {
         res.redirect("/")
     }
@@ -152,14 +155,13 @@ router.post('/', async (req, res) => {
             user_id: req.session.user_id
         });
 
-        // Should return this data as the response
+        // Is the submitted response
         let dataDump = {
             bird_id: birdPlain[0].id,
             coordinates: req.body.coordinates,
-            user_id: req.session.user_id // req.body.user_id //change to 'req.session.user_id' when POST method works
+            user_id: req.session.user_id // Uses the user_id assigned to the user session
         }
 
-        console.log("datadump:",dataDump)
       res.status(200).json(dataDump);
     } catch (err) {
       res.status(400).json(err);
@@ -172,6 +174,8 @@ router.delete('/:id', async (req, res) => {
         res.redirect("/")
     }
 try {
+
+    // destroys a bird row if the submitted bird ID matches the database
     const birdData = await Bird.destroy({
     where: {id: req.params.id},
     });
