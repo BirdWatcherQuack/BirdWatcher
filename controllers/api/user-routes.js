@@ -1,12 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const bcrypt = require('bcrypt');
-//const uuidv1 = require('uuid/v1');
+
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
-
-
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
     const dbUserData = await User.create({
@@ -15,8 +13,6 @@ router.post('/', async (req, res) => {
       password: hashedPassword,
     });
 
-
-    // res.status(200).json(userData);
 
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
@@ -57,12 +53,6 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect username or password. Please try again!' });
       return;
     }
-
-    // if (await bcrypt.compare(req.body.password, user.password)) {
-    //   res.send('Success')
-
-    // }
-    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
 
     req.session.save(() => {
       req.session.loggedIn = true;
