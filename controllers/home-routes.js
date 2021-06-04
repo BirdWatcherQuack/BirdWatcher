@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Sequelize = require('sequelize');
 const { User, Bird } = require("../models");
 
+// The homepage login, not logged in
 router.get("/", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/home');
@@ -13,7 +14,7 @@ router.get("/", (req, res) => {
   });
 });
 
-//✔️ gets 8 random cards
+//✔️ gets 8 random cards and presents them on the /home page
 router.get("/home", async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -25,7 +26,6 @@ router.get("/home", async (req, res) => {
         let thisBird = encounters[i].get({ plain: true })
         birdRandomCards.push(thisBird)
       }
-      console.log('thisBird', birdRandomCards)
       res.render('birdcard', {
         layout: 'main',
         birdsArr: birdRandomCards,
@@ -37,7 +37,7 @@ router.get("/home", async (req, res) => {
   }
 });
 
-// ✔️
+// ✔️ returns a page of an individual bird's details
 router.get("/singlebird/:id", async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -54,6 +54,7 @@ router.get("/singlebird/:id", async (req, res) => {
   }
 });
 
+// Adds the username to the navigation bar
 router.get("/home", async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -62,9 +63,7 @@ router.get("/home", async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
     });
-    console.log(userData)
     const userArr = userData.map((user) => user.get({ plain: true }));
-    console.log(userArr)
     res.render('username', {
       layout: 'main',
       userArr: userArr,
@@ -75,6 +74,7 @@ router.get("/home", async (req, res) => {
   }
 });
 
+// Creates the cookie
 router.get('/home', (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -85,31 +85,7 @@ router.get('/home', (req, res) => {
   });
 });
 
-// router.get('/home', (req, res) => {
-//   User.findAll({
-//     attributes: { exclude: ['password'] },
-//     where: {
-//       user_id: req.session.user_id
-//     },
-//     include: [
-//       {
-//         model: User,
-//         attributes: ['username']
-//       }
-//     ]
-//   });
-//   const user = userData.get({ plain: true });
-//   res.render('username', {
-//     user,
-//     loggedIn: true
-
-//   })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-
+// Returns all birds in the database in a dedicated page
 router.get('/homeall', async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -127,51 +103,46 @@ router.get('/homeall', async (req, res) => {
     res.render('allbirds', {
       layout: 'main',
       birdsArr: birdPlain,
-
     });
-    // for (let i = 0 ; i < birdPlain.length; i++) {
-    // console.log(birdPlain)
-    // }
-
-
-
-
-    // res.status(200).json(birdPlain);
 
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-
 });
 
+// Returns a form which allows you to create a new type of bird
 router.get("/newbird", (req, res) => {
-  // if (!req.session.user_id) {
-  //   res.redirect("/")
-  // }
+  if (!req.session.user_id) {
+    res.redirect("/")
+  }
   res.render("newbird", {
     layout: "main",
   });
 });
 
+// Returns the 'forgot password form' Handlebar
 router.get('/forgot', (req, res) => {
   res.render('forgotpassword', {
     layout: 'forgot',
   });
 })
 
+// Returns a 'Terms of Service' Handlebar
 router.get("/termsofservice", (req, res) => {
   res.render("termsofservice", {
     layout: "terms",
   });
 });
 
+// Returns a 'Privacy Policy' Handlebar
 router.get("/privacypolicy", (req, res) => {
   res.render("privacypolicy", {
     layout: "terms",
   });
 });
 
+// Returns an interactive map Handlebar, allowing you to POST to api/birds/sightings
 router.get("/map", (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -181,10 +152,16 @@ router.get("/map", (req, res) => {
   });
 });
 
+// Returns a bird deletion form Handlebar, allowing you to send a DELETE request to 
+// api/birds/:id
 router.get("/delete", (req, res) => {
   res.render("secretdelete", {
     layout: "terms",
   });
+});
+
+router.get("*", (req, res) => {
+  res.redirect("/home")
 });
 
 
