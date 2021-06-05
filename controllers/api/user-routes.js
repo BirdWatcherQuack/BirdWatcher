@@ -7,16 +7,11 @@ router.post('/', async (req, res) => {
   try {
 
 
-    const hashedPassword = await bcrypt.hash(req.body.password, 10)
-
     const dbUserData = await User.create({
       username: req.body.username,
       email: req.body.email,
-      password: hashedPassword,
+      password: req.body.password,
     });
-
-
-    // res.status(200).json(userData);
 
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
@@ -34,13 +29,14 @@ router.post('/', async (req, res) => {
 // Login
 router.post('/login', async (req, res) => {
   try {
+    console.log(req.body)
     const dbUserData = await User.findOne({
       where: {
         username: req.body.username,
       },
     });
 
-    console.log(dbUserData)
+    console.log("dbUserData", dbUserData)
 
     if (!dbUserData) {
       res
@@ -58,10 +54,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // if (await bcrypt.compare(req.body.password, user.password)) {
-    //   res.send('Success')
 
-    // }
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
 
     req.session.save(() => {
