@@ -148,7 +148,7 @@ i {
   text-align: center;
 }
 
-.allBirds a{
+.allBirds a, .shuffle a{
   font-size: 20px;
   color: rgb(3, 54, 3);
 }
