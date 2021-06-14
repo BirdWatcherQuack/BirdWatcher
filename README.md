@@ -27,6 +27,7 @@
      * The user is presented random HTML `cards` containing images of birds commonly found in the Ottawa area.
      * Hovering over the card with the mouse displays the name of the bird associated with the image, as well as a `Learn More` feature allowing you to view more details about the bird in question. This feature applies to all bird cards.
      * At the bottom of the random selection of birds, there is a `View All Birds` link to see the complete list of pre-submitted birds, arranged alphabetically. This option is also available in the navigation bar.
+     * Also, there is a `Shuffle` link, that helps to refresh page in order to see other 8 random birds.
      * The navigation bar allows users to quickly find features which allow them to submit bird sightings, view specifics about a particular bird, or submit a new bird profile.
      * The homepage includes a map containing bird markers; they represent bird sightings, corresponding to the birds from the (above) cards. They are selected randomly from the database, meaning that these markers will naturally be different each time the page loads!
 
