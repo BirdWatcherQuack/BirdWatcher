@@ -35,7 +35,7 @@ if (identifier === "map") {
     console.log(typeof idToNum)
     singleBirdMarkerGenerator(idToNum)
   }
-  catch  {console.log(`This is the ${identifier} page`)}
+  catch { console.log(`This is the ${identifier} page`) }
 }
 
 
@@ -55,9 +55,9 @@ function onMapClick(e) {
   function addMarker(x, y) {
 
     popup
-        .setLatLng(e.latlng)
-        .setContent(`You found this bird at ${e.latlng.toString()}. Updating your coordinates`)
-        .openOn(myOttawaMap);
+      .setLatLng(e.latlng)
+      .setContent(`You found this bird at ${e.latlng.toString()}. Updating your coordinates`)
+      .openOn(myOttawaMap);
   }
 
   myOttawaMap.on('click', addMarker(lat, long))
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       // console.log(data)
       let birdNameArray = []
-      for (let i = 0 ; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         let birdName = data[i][0];
         birdNameArray.push(birdName)
       }
@@ -145,7 +145,7 @@ document.getElementById("submitButton").addEventListener("click", function () {
           const birdToCompare = dataPackage.bird_name
           // console.log(birdToCompare)
 
-          for (let i = 0 ; i < datasecond.length; i++) {
+          for (let i = 0; i < datasecond.length; i++) {
             let birdName = datasecond[i][0];
             if (birdToCompare === birdName) {
               // console.log(`${birdToCompare} matches ${birdName}`)
@@ -159,7 +159,6 @@ document.getElementById("submitButton").addEventListener("click", function () {
           console.error('Error:', error);
         });
 
-      // console.log("client-side data meant to be submitted to back-end", dataPackage)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -174,15 +173,14 @@ function homeBirdsMarkerGenerator() {
   const birdDataIds = []
 
   // loop to extract the data-birdid for each `bird-card` div
-  for (let i = 0 ; i < birdDiv.length; i++) {
+  for (let i = 0; i < birdDiv.length; i++) {
     let indBirdId = birdDiv[i].dataset.birdid
     // console.log(indBirdId)
     birdDataIds.push(indBirdId)
   }
-  // console.log(birdDataIds)
 
   // loop to run a separate API call for the data values
-  for (let j = 0 ; j < birdDataIds.length; j++) {
+  for (let j = 0; j < birdDataIds.length; j++) {
     // console.log("This page has loaded")
     fetch(`/api/birds/sightings/${birdDataIds[j]}`, {
       method: 'GET',
@@ -191,20 +189,14 @@ function homeBirdsMarkerGenerator() {
       },
     })
       .then((response) => {
-        // console.log(`finding data from ${birdDataIds[j]}`)
         return response.json()
       })
       .then((data) => {
-        // console.log(data)
         let coordinates = data.coordinates
         for (let i = 0; i < coordinates.length; i++) {
-          // console.log(coordinates[i])
           splitCoor = coordinates[i].split(", ")
-          // console.log(splitCoor)
           const x = splitCoor[0]
           const y = splitCoor[1]
-          // console.log(x)
-          // console.log(y)
 
           L.marker([x, y], { icon: birdyIcon }).addTo(myOttawaMap).bindPopup(`<b>${data.bird_name}</b><br>
           Caught in the act at ${x}, ${y}.`);
@@ -219,9 +211,9 @@ function homeBirdsMarkerGenerator() {
 
 // for /singlebird/:id
 function singleBirdMarkerGenerator(idNum) {
-  // console.log(`This is the singleBirdMarkerGenerator function with id of ${idNum}`)
-  document.addEventListener("DOMContentLoaded", function() {
-    // console.log("This page has loaded")
+
+  document.addEventListener("DOMContentLoaded", function () {
+
     fetch(`/api/birds/sightings/${idNum}`, {
       method: 'GET',
       headers: {
@@ -253,4 +245,3 @@ function singleBirdMarkerGenerator(idNum) {
       });
   })
 }
-    

@@ -85,31 +85,6 @@ router.get('/home', (req, res) => {
   });
 });
 
-// router.get('/home', (req, res) => {
-//   User.findAll({
-//     attributes: { exclude: ['password'] },
-//     where: {
-//       user_id: req.session.user_id
-//     },
-//     include: [
-//       {
-//         model: User,
-//         attributes: ['username']
-//       }
-//     ]
-//   });
-//   const user = userData.get({ plain: true });
-//   res.render('username', {
-//     user,
-//     loggedIn: true
-
-//   })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-
 router.get('/homeall', async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/")
@@ -129,14 +104,6 @@ router.get('/homeall', async (req, res) => {
       birdsArr: birdPlain,
 
     });
-    // for (let i = 0 ; i < birdPlain.length; i++) {
-    // console.log(birdPlain)
-    // }
-
-
-
-
-    // res.status(200).json(birdPlain);
 
   } catch (err) {
     console.log(err);

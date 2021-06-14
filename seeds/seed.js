@@ -14,10 +14,7 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  //await Bird.bulkCreate(birdData, {
-  //  individualHooks: true,
-  //  returning: true,
-  //});
+
   for (const bird of birdData) {
     await Bird.create({
       ...bird,

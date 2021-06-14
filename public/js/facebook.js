@@ -1,4 +1,3 @@
-
 //sign up with facebook
 
 window.fbAsyncInit = function () {
@@ -8,10 +7,6 @@ window.fbAsyncInit = function () {
     xfbml: true,
     version: 'v10.0'
   });
-
-  // FB.getLoginStatus(function (response) {
-  //   statusChangeCallback(response);
-  // });
 
   FB.AppEvents.logPageView();
 
@@ -60,22 +55,8 @@ function logIn() {
 
 };
 
-// function checkLoginState() {
-//   FB.getLoginStatus(function (response) {
-//     statusChangeCallback(response)
-//   });
-// }
 
-// function setElements(isLoggedIn) {
-//   if (isLoggedIn) {
-//     document.location.replace('/home');
-//     document
-//       .querySelector('.sign-in-form')
-//       .addEventListener('submit', loginFormHandler);
-//   }
-// }
-
-//logout if signed up with Facebook
+//logout if signed up with Facebook doesn't work fo now
 function fLogout() {
   FB.logout(function (response) {
     console.log(response)
@@ -88,51 +69,3 @@ function fLogout() {
 }
 document.querySelector('#logout').addEventListener('click', fLogout);
 
-// function fLogout() {
-//   FB.getLoginStatus(function (response) {
-//     if (response && response.status === 'connected') {
-//       FB.logout(function (response) {
-//         document.location.replace('/');
-//         console.log(response.status)
-//       });
-//     }
-//   });
-// }
-// document.querySelector('#logout').addEventListener('click', fLogout);
-
-
-
-
-
-// const fLogout = async () => {
-//   const response = await fetch('https://graph.facebook.com/me?fields=id,name,email&access_token=${token}', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-
-//   });
-//   console.log("response ")
-
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert('Failed to log out.');
-//   }
-// };
-
-// document.querySelector('#logout').addEventListener('click', fLogout);
-
-
-// const fLogout = async () => {
-//   const response = await fetch('/api/users/logout', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//   });
-
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert('Failed to log out.');
-//   }
-// };
-
-// document.querySelector('#logout').addEventListener('click', fLogout);
