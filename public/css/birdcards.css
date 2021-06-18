@@ -153,11 +153,17 @@ i {
   color: rgb(3, 54, 3);
 }
 
-.allBirds {
+.allBirds, .shuffle {
   flex: 0 0 100%;
+}
+
+.shuffle {
+  margin-left: 95%;
+}
+
+.allBirds {
   margin-left: 92%;
   margin-bottom: 5%;
-  
 }
 
 .birdImg  {
